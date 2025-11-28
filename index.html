@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirgi Mukti</title>
+    <link href="https://fonts.googleapis.com/css2?family=eczar:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+
+        :root {
+            --brand-primary: #1f7f12;
+            --brand-secondary: #FFB400;
+            --brand-light: #f7f7ff;
+            --brand-muted: #e8c9af;
+            --brand-accent: #ffffff;
+        }
+        
+        .bg-brand-primary { background-color: var(--brand-primary); }
+        .bg-brand-secondary { background-color: var(--brand-secondary); }
+        .bg-brand-light { background-color: var(--brand-light); }
+        .bg-brand-muted { background-color: var(--brand-muted); }
+        .bg-brand-accent { background-color: var(--brand-accent); }
+        
+        .text-brand-primary { color: var(--brand-primary); }
+        .text-brand-secondary { color: var(--brand-secondary); }
+        .text-brand-light { color: var(--brand-light); }
+        .text-brand-muted { color: var(--brand-muted); }
+        .text-brand-accent { color: var(--brand-accent); }
+        
+        .border-brand-primary { border-color: var(--brand-primary); }
+        .border-brand-secondary { border-color: var(--brand-secondary); }
+        .border-brand-light { border-color: var(--brand-light); }
+        .border-brand-muted { border-color: var(--brand-muted); }
+        .border-brand-accent { border-color: var(--brand-accent); }
+        
+        .font-eczar { font-family: 'eczar', serif; }
+        .font-eczar { font-family: 'Eczar', sans-serif; }
+        .font-tiro { font-family: 'Tiro Devanagari Hindi', serif; }
+        .font-halant { font-family: 'Halant', serif; }
+        
+        .main-container { max-width: 1200px; margin: 0 auto; }
+        
+        /* Custom animations */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .5;
+            }
+        }
+        
+        @keyframes ping {
+            75%, 100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(-25%);
+                animation-timing-function: cubic-bezier(0.8,0,1,1);
+            }
+            50% {
+                transform: none;
+                animation-timing-function: cubic-bezier(0,0,0.2,1);
+            }
+        }
+        
+        .animate-slideDown { animation: slideDown 0.6s ease-out; }
+        .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        .animate-ping { animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite; }
+        .animate-bounce { animation: bounce 1s infinite; }
+    </style>
+    <style>
+        body {
+            scroll-behavior: smooth;
+            font-weight: 400;
+            /* Space for fixed CTA */
+        }
+
+        /* Container width control */
+        .main-container {
+            max-width: 450px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 450px) {
+            .main-container {
+                max-width: 100%;
+            }
+            .main-container {
+                margin-bottom: 100px;
+            }
+            
+        }
+    </style>
+</head>
+
+<body class="font-sans leading-relaxed bg-brand-light text-gray-800">
+    <div class=" w-full main-container">
+        <!-- Header -->
+        <header
+            class="bg-brand-primary border-b-2 border-gray-100 text-brand-secondary p-4 flex justify-between items-center gap-6 max-[450px]:p-5 max-[450px]:px-4 max-[450px]:gap-4">
+            <div class="flex items-center gap-4 max-[450px]:gap-3 flex-1">
+                <div class="w-full"
+                    style="background-color:rgba(255,255,255,0.2); border-radius: 15px; padding: 8px 16px; backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.3); box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
+                    <div
+                        class="brand-text-enhanced font-tiro text-2xl font-bold max-[450px]:text-2xl hover:scale-105 transition-transform duration-300 cursor-default text-white drop-shadow-lg text-center leading-tight">
+                        <div class="flex items-center justify-center gap-2 max-[450px]:gap-1 flex-wrap">
+                            <span
+                                class="inline-block text-brand-secondary animate-pulse text-1xl max-[450px]:text-xl">🌿</span>
+                            <span class="whitespace-nowrap text-brand-secondary">मिर्गी</span>
+                            <span class="whitespace-nowrap text-brand-secondary">मुक्ति</span>
+                            <span class="inline-block animate-pulse text-1xl max-[450px]:text-xl">✨</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button
+                class="bg-brand-secondary text-red-800 font-bold border-none px-6 py-3 rounded-lg font-bold text-xl cursor-pointer transition-all duration-300 hover:bg-opacity-80 max-[450px]:text-xl max-[450px]:px-4 max-[450px]:py-3 btn-bounce pulse-button glow-effect flex-shrink-0"
+                onclick="scrollToContact()" onmouseenter="this.classList.add('shake')"
+                onmouseleave="this.classList.remove('shake')">
+                <span class="relative z-10">🛒 ऑर्डर करें
+                </span>
+            </button>
+        </header>
+        <!-- Main Content -->
+        <main class="bg-brand-primary">
+
+                      <!-- Solution Section -->
+            <section  class="bg-gradient-to-br from-white via-gray-50 to-blue-50 py-12 px-4 max-[450px]:py-8 max-[450px]:px-3 relative overflow-hidden">
+                <div class="container relative z-10">
+                    <!-- Section Heading -->
+                    <div class="text-center mb-12 max-[450px]:mb-8">
+                        <div class="inline-block relative">
+                            <h2
+                                class="text-5xl font-eczar font-bold max-[450px]:text-4xl text-brand-primary drop-shadow-lg relative z-10 leading-relaxed">
+                                Mirgi Mukti से
+                                क्या-क्या फर्क महसूस होता है?
+                            </h2>
+                        </div>
+                        <div class="mt-4 flex justify-center">
+                            <div
+                                class="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full animate-pulse">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benefits Grid with Vector Images -->
+                    <div class="space-y-12 max-[450px]:space-y-8">
+                        
+                        <!-- Benefit 1 -->
+                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                            <div class="flex flex-col">
+                                <!-- Text Content -->
+                                <div class="p-6 max-[450px]:p-4">
+                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        मिर्गी का बारंबार होना कम करने में मदद
+                                    </h3>
+                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        दौरे की आवृत्ति को कम करके आपको बेहतर जीवन की गुणवत्ता प्रदान करता है।
+                                    </p>
+                                </div>
+                                <!-- Image Content -->
+                                <div class="p-4 max-[450px]:p-3">
+                                    <img src="./image/Solve11.avif" alt="मिर्गी का बारंबार होना कम करने में मदद" 
+                                        class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                            <div class="flex flex-col">
+                                <!-- Text Content -->
+                                <div class="p-6 max-[450px]:p-4">
+                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        मस्तिष्क असंतुलन को शांत करना
+                                    </h3>
+                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        न्यूरल असंतुलन को स्थिर करके मानसिक शांति और स्थिरता लाता है।
+                                    </p>
+                                </div>
+                                <!-- Image Content -->
+                                <div class="p-4 max-[450px]:p-3">
+                                    <img src="./image/Solve12.avif" alt="मस्तिष्क असंतुलन को शांत करना" 
+                                        class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                            <div class="flex flex-col">
+                                <!-- Text Content -->
+                                <div class="p-6 max-[450px]:p-4">
+                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        बेहोशी से गिरने के अवसरों को कम करना
+                                    </h3>
+                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        अचानक बेहोशी और गिरने की घटनाओं को रोकने में सहायक।
+                                    </p>
+                                </div>
+                                <!-- Image Content -->
+                                <div class="p-4 max-[450px]:p-3">
+                                    <img src="./image/Solve13.avif" alt="बेहोशी से गिरने के अवसरों को कम करना" 
+                                        class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 4 -->
+                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                            <div class="flex flex-col">
+                                <!-- Text Content -->
+                                <div class="p-6 max-[450px]:p-4">
+                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        दौरे आने की तीव्रता कम करना
+                                    </h3>
+                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        जब दौरे आते हैं तो उनकी तीव्रता और समयावधि को कम करता है।
+                                    </p>
+                                </div>
+                                <!-- Image Content -->
+                                <div class="p-4 max-[450px]:p-3">
+                                    <img src="./image/Solve14.avif" alt="दौरे आने की तीव्रता कम करना" 
+                                        class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 5 -->
+                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                            <div class="flex flex-col">
+                                <!-- Text Content -->
+                                <div class="p-6 max-[450px]:p-4">
+                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        कांपना + घबराहट + चिंता में राहत
+                                    </h3>
+                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        शारीरिक कंपकंपी, मानसिक घबराहट और चिंता से मुक्ति दिलाता है।
+                                    </p>
+                                </div>
+                                <!-- Image Content -->
+                                <div class="p-4 max-[450px]:p-3">
+                                    <img src="./image/Solve15.avif" alt="कांपना + घबराहट + चिंता में राहत" 
+                                        class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 6 -->
+                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                            <div class="flex flex-col">
+                                <!-- Text Content -->
+                                <div class="p-6 max-[450px]:p-4">
+                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        Stroke के बाद होने वाले छोटे दौरा में आयुर्वेदिक सहायता
+                                    </h3>
+                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        स्ट्रोक के बाद होने वाले मिनी सीजर्स को नियंत्रित करने में प्राकृतिक सहायता।
+                                    </p>
+                                </div>
+                                <!-- Image Content -->
+                                <div class="p-4 max-[450px]:p-3">
+                                    <img src="./image/Solve16.avif" alt="Stroke के बाद होने वाले छोटे दौरा में आयुर्वेदिक सहायता" 
+                                        class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 7 -->
+                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                            <div class="flex flex-col">
+                                <!-- Text Content -->
+                                <div class="p-6 max-[450px]:p-4">
+                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        दीर्घकालिक तंत्रिका सुरक्षा
+                                    </h3>
+                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        लंबे समय तक न्यूरल सिस्टम की सुरक्षा और मजबूती प्रदान करता है।
+                                    </p>
+                                </div>
+                                <!-- Image Content -->
+                                <div class="p-4 max-[450px]:p-3">
+                                    <img src="./image/Solve17.avif" alt="दीर्घकालिक तंत्रिका सुरक्षा" 
+                                        class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- Contact Section -->
+            <section class="px-4 py-4 bg-brand-primary text-white max-[450px]:py-6 max-[450px]:px-3" id="contact">
+                <form id="contactForm">
+                    <div class="mb-4 max-[450px]:mb-3">
+                        <label for="name"
+                            class="block mb-2 text-xl text-white font-tiro font-semibold max-[450px]:text-lg max-[450px]:mb-1">आपका
+                            नाम:</label>
+                        <input type="text" id="name" name="name" required placeholder="अपना नाम लिखें"
+                            class="w-full p-3 border-none rounded text-lg text-brand-primary placeholder-gray-500 font-tiro max-[450px]:p-2 max-[450px]:text-base bg-brand-light">
+                    </div>
+                    <div class="mb-4 max-[450px]:mb-3">
+                        <label for="phone"
+                            class="block mb-2 text-xl text-white font-tiro font-semibold max-[450px]:text-lg max-[450px]:mb-1">फोन
+                            नंबर:</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="अपना फोन नंबर लिखें"
+                            class="w-full p-3 border-none rounded text-lg text-brand-primary placeholder-gray-500 font-tiro max-[450px]:p-2 max-[450px]:text-base bg-brand-light">
+                    </div>
+                    <button type="submit"
+                        class="bg-brand-secondary text-brand-accent font-bold border-none py-4 px-8 rounded text-2xl font-tiro font-bold cursor-pointer w-full mt-4 transition-all duration-300 hover:bg-opacity-90 max-[450px]:py-3 max-[450px]:px-4 max-[450px]:text-xl max-[450px]:mt-3 pulse-button glow-effect"
+                        onmouseenter="this.classList.add('shake')" onmouseleave="this.classList.remove('shake')" onclick="showThankYou()">
+                        <span>✨</span>
+                        अभी ऑर्डर करें
+                        <span>✨</span>
+                    </button>
+                </form>
+            </section>
+        </main>
+
+        <footer class="bg-brand-primary text-white py-4 px-4 text-center max-[450px]:py-4 max-[450px]:px-3 pb-28 max-[450px]:pb-32">
+            <div class="text-sm text-white mt-4 font-tiro max-[450px]:text-xs max-[450px]:mt-2">
+                <p><strong class="font-tiro font-semibold">⚠️ Disclaimer :-</strong>This product is not intended to
+                    diagnose, treat, cure, or prevent any disease. Results may vary from person to person. Always
+                    consult with a qualified healthcare professional before starting any new supplement.</p>
+            </div>
+        </footer>
+        <!-- Thank You Modal -->
+        <div id="thankYouModal"
+            class="hidden fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center" style="background-color:rgba(255,255,255,0.2); border-radius: 15px; padding: 8px 16px; backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.3); box-shadow: 0 8px 25px rgba(0, 0, 0, 0);">
+            <div
+                class="bg-brand-light p-8 rounded-lg text-center max-w-sm mx-4 max-[450px]:p-6 max-[450px]:max-w-xs border-2 border-brand-secondary">
+                <h2 class="text-brand-primary mb-4 text-2xl font-tiro font-bold max-[450px]:text-xl max-[450px]:mb-3">
+                    धन्यवाद!</h2>
+                <p class="text-xl mb-6 font-tiro font-medium max-[450px]:text-lg max-[450px]:mb-4 text-gray-700">
+                    हमने
+                    आपकी
+                    जानकारी
+                    प्राप्त कर ली है और आपकी
+                    मुफ्त सलाह निर्धारित करने के लिए 24 घंटे के भीतर आपसे संपर्क करेंगे।</p>
+            </div>
+        </div>
+
+        <!-- Fixed CTA Form at Bottom -->
+        <div id="fixedCTA"
+            class="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-brand-primary shadow-2xl w-[450px] max-w-full border-t-4 border-brand-secondary">
+            <div class="px-2 py-2 w-full max-[450px]:px-4 max-[450px]:py-2">
+                <!-- Countdown Timer Heading -->
+                <div class="text-center mb-2">
+                    <!-- <div class="text-white text-base font-tiro font-bold mb-1">
+                        ⏰ आज का ऑफर समाप्त होने में:
+                    </div> -->
+                    <div id="countdown" class="text-white text-2xl max-[450px]:text-3xl font-extrabold font-eczar">
+                       00:00:00
+                    </div>
+                </div>
+
+                <!-- Main Content: Left Points + Right Offer/Button -->
+                <div class="flex items-center gap-6">
+                    <!-- Left Side: Three Promotional Points with Bullets -->
+                    <div class="flex-1">
+                        <ul class="text-white text-lg font-eczar font-bold space-y-1">
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-secondary text-lg">•</span>
+                                <span>🔥 Today Offer</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-secondary text-lg">•</span>
+                                <span>💰 COD Available</span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="text-brand-secondary text-lg">•</span>
+                                <span>🚚 Free Delivery</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right Side: 10% OFF + Button -->
+                    <div class="flex flex-col items-center gap-2">
+                        <!-- Bouncing 10% OFF Text -->
+                        <div class="inline-block animate-bounce">
+                            <span class="text-3xl  font-extrabold text-white bg-red-800 px-4 py-1 rounded-full shadow-lg font-eczar">
+                                🎉 10% OFF
+                            </span>
+                        </div>
+                        
+                        <!-- Order Button -->
+                        <button id="ctaButton" onclick="scrollToContact()"
+                            class="cta-button bg-brand-secondary text-red-700 px-6 py-2 rounded-lg font-eczar font-bold text-xl transition-all duration-300 shadow-lg hover:scale-105 pulse-animation glow-effect whitespace-nowrap"
+                            onmouseenter="this.classList.add('shake')" onmouseleave="this.classList.remove('shake')">
+                            🛒 अभी ऑर्डर करें
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showThankYou() {
+            // Process and fill form data
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            
+            // Validate form data
+            if (!name || !phone) {
+                alert('कृपया सभी फील्ड भरें!');
+                return false;
+            }
+            
+            // Process the data (you can modify this part as needed)
+            const formData = {
+                customerName: name,
+                phoneNumber: phone,
+                timestamp: new Date().toLocaleString('hi-IN'),
+                product: 'Mirgi Mukti'
+            };
+            
+            // Fill/store the processed data (example: console log or local storage)
+            console.log('Form Data Processed:', formData);
+            localStorage.setItem('customerOrder', JSON.stringify(formData));
+            
+            // Show thank you modal if it exists, otherwise show alert
+            const modal = document.getElementById('thankYouModal');
+            if (modal) {
+                modal.style.display = 'flex';
+                // Auto close after 3 seconds
+                setTimeout(() => {
+                    closeModal();
+                }, 20000);
+            } else {
+                // Fallback alert with processed data
+                alert(`धन्यवाद ${name}! आपका ऑर्डर सफलतापूर्वक सबमिट हो गया है। हमारी टीम जल्द ही ${phone} पर आपसे संपर्क करेगी।`);
+                document.getElementById('contactForm').reset();
+            }
+            
+            return true;
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('thankYouModal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+            document.getElementById('contactForm').reset();
+        }
+        
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Countdown Timer Function
+        function updateCountdown() {
+            const now = new Date();
+            const tomorrow = new Date(now);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0); // Set to midnight
+
+            const timeRemaining = tomorrow - now;
+            
+            const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            const formattedTime = 
+                String(hours).padStart(2, '0') + ':' +
+                String(minutes).padStart(2, '0') + ':' +
+                String(seconds).padStart(2, '0');
+
+            const countdownElement = document.getElementById('countdown');
+            if (countdownElement) {
+                countdownElement.textContent = formattedTime;
+            }
+        }
+
+        // Start countdown on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCountdown();
+            setInterval(updateCountdown, 1000); // Update every second
+        });
+    </script>
+
+</body>
+
+</html>
