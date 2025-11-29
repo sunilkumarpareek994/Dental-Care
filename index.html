@@ -4,87 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mirgi Mukti</title>
+    <title>Dental Care</title>
     <link href="https://fonts.googleapis.com/css2?family=eczar:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-
         :root {
-            --brand-primary: #1f7f12;
-            --brand-secondary: #FFB400;
-            --brand-light: #f7f7ff;
-            --brand-muted: #e8c9af;
+            --brand-primary: #215684;
+            --brand-secondary: #5991ac;
+            --brand-light: #c7dfe6;
+            --brand-muted: #89bd56;
             --brand-accent: #ffffff;
         }
-        
-        .bg-brand-primary { background-color: var(--brand-primary); }
-        .bg-brand-secondary { background-color: var(--brand-secondary); }
-        .bg-brand-light { background-color: var(--brand-light); }
-        .bg-brand-muted { background-color: var(--brand-muted); }
-        .bg-brand-accent { background-color: var(--brand-accent); }
-        
-        .text-brand-primary { color: var(--brand-primary); }
-        .text-brand-secondary { color: var(--brand-secondary); }
-        .text-brand-light { color: var(--brand-light); }
-        .text-brand-muted { color: var(--brand-muted); }
-        .text-brand-accent { color: var(--brand-accent); }
-        
-        .border-brand-primary { border-color: var(--brand-primary); }
-        .border-brand-secondary { border-color: var(--brand-secondary); }
-        .border-brand-light { border-color: var(--brand-light); }
-        .border-brand-muted { border-color: var(--brand-muted); }
-        .border-brand-accent { border-color: var(--brand-accent); }
-        
-        .font-eczar { font-family: 'eczar', serif; }
-        .font-eczar { font-family: 'Eczar', sans-serif; }
-        .font-tiro { font-family: 'Tiro Devanagari Hindi', serif; }
-        .font-halant { font-family: 'Halant', serif; }
-        
-        .main-container { max-width: 1200px; margin: 0 auto; }
-        
-        /* Custom animations */
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        .bg-brand-primary {
+            background-color: var(--brand-primary);
         }
-        
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: .5;
-            }
+
+        .bg-brand-secondary {
+            background-color: var(--brand-secondary);
         }
-        
-        @keyframes ping {
-            75%, 100% {
-                transform: scale(2);
-                opacity: 0;
-            }
+
+        .bg-brand-light {
+            background-color: var(--brand-light);
         }
-        
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(-25%);
-                animation-timing-function: cubic-bezier(0.8,0,1,1);
-            }
-            50% {
-                transform: none;
-                animation-timing-function: cubic-bezier(0,0,0.2,1);
-            }
+
+        .bg-brand-muted {
+            background-color: var(--brand-muted);
         }
-        
-        .animate-slideDown { animation: slideDown 0.6s ease-out; }
-        .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-        .animate-ping { animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite; }
-        .animate-bounce { animation: bounce 1s infinite; }
+
+        .bg-brand-accent {
+            background-color: var(--brand-accent);
+        }
+
+        .text-brand-primary {
+            color: var(--brand-primary);
+        }
+
+        .text-brand-secondary {
+            color: var(--brand-secondary);
+        }
+
+        .text-brand-light {
+            color: var(--brand-light);
+        }
+
+        .text-brand-muted {
+            color: var(--brand-muted);
+        }
+
+        .text-brand-accent {
+            color: var(--brand-accent);
+        }
+
+        .border-brand-primary {
+            border-color: var(--brand-primary);
+        }
+
+        .border-brand-secondary {
+            border-color: var(--brand-secondary);
+        }
+
+        .border-brand-light {
+            border-color: var(--brand-light);
+        }
+
+        .border-brand-muted {
+            border-color: var(--brand-muted);
+        }
+
+        .border-brand-accent {
+            border-color: var(--brand-accent);
+        }
+
+        .font-eczar {
+            font-family: 'eczar', serif;
+        }
+
+        .font-eczar {
+            font-family: 'Eczar', sans-serif;
+        }
+
+        .font-eczar {
+            font-family: 'eczar Devanagari Hindi', serif;
+        }
+
+        .font-halant {
+            font-family: 'Halant', serif;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
     </style>
     <style>
         body {
@@ -106,10 +118,60 @@
             .main-container {
                 max-width: 100%;
             }
+
             .main-container {
-                margin-bottom: 100px;
+                margin-bottom: 20px;
             }
-            
+
+        }
+
+        /* Scrolling Animation */
+        @keyframes scroll-rtl {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll-rtl 30s 0s ease-in-out infinite;
+        }
+
+        .marquee-content {
+            display: inline-block;
+        }
+
+        /* FAQ Styling for smooth transitions */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+            opacity: 0;
+        }
+
+        .faq-answer.show {
+            max-height: 200px;
+            opacity: 1;
+        }
+
+        .faq-question {
+            transition: all 0.3s ease;
+        }
+
+        .faq-question span {
+            color: var(--brand-primary) !important;
+            transition: all 0.3s ease;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.faq-active .faq-icon {
+            transform: rotate(180deg);
         }
     </style>
 </head>
@@ -123,19 +185,19 @@
                 <div class="w-full"
                     style="background-color:rgba(255,255,255,0.2); border-radius: 15px; padding: 8px 16px; backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.3); box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
                     <div
-                        class="brand-text-enhanced font-tiro text-2xl font-bold max-[450px]:text-2xl hover:scale-105 transition-transform duration-300 cursor-default text-white drop-shadow-lg text-center leading-tight">
+                        class="brand-text-enhanced font-eczar text-2xl font-bold max-[450px]:text-2xl hover:scale-105 transition-transform duration-300 cursor-default text-white drop-shadow-lg text-center leading-tight">
                         <div class="flex items-center justify-center gap-2 max-[450px]:gap-1 flex-wrap">
-                            <span
-                                class="inline-block text-brand-secondary animate-pulse text-1xl max-[450px]:text-xl">🌿</span>
-                            <span class="whitespace-nowrap text-brand-secondary">मिर्गी</span>
-                            <span class="whitespace-nowrap text-brand-secondary">मुक्ति</span>
-                            <span class="inline-block animate-pulse text-1xl max-[450px]:text-xl">✨</span>
+                            <!-- <span
+                                class="inline-block text-brand-secondary animate-pulse text-1xl max-[450px]:text-xl">🌿</span> -->
+                            <span class="whitespace-nowrap text-brand-White">Dental</span>
+                            <span class="whitespace-nowrap text-brand-white">Care</span>
+                            <!-- <span class="inline-block animate-pulse text-1xl max-[450px]:text-xl">✨</span> -->
                         </div>
                     </div>
                 </div>
             </div>
             <button
-                class="bg-brand-secondary text-red-800 font-bold border-none px-6 py-3 rounded-lg font-bold text-xl cursor-pointer transition-all duration-300 hover:bg-opacity-80 max-[450px]:text-xl max-[450px]:px-4 max-[450px]:py-3 btn-bounce pulse-button glow-effect flex-shrink-0"
+                class="bg-brand-secondary text-white font-bold border-none px-6 py-3 rounded-lg font-bold text-xl cursor-pointer transition-all duration-300 hover:bg-opacity-80 max-[450px]:text-xl max-[450px]:px-4 max-[450px]:py-3 btn-bounce pulse-button glow-effect flex-shrink-0"
                 onclick="scrollToContact()" onmouseenter="this.classList.add('shake')"
                 onmouseleave="this.classList.remove('shake')">
                 <span class="relative z-10">🛒 ऑर्डर करें
@@ -145,214 +207,1353 @@
         <!-- Main Content -->
         <main class="bg-brand-primary">
 
-                      <!-- Solution Section -->
-            <section  class="bg-gradient-to-br from-white via-gray-50 to-blue-50 py-12 px-4 max-[450px]:py-8 max-[450px]:px-3 relative overflow-hidden">
+            <!-- Hero Section -->
+            <section class="px-4 py-6  max-[450px]:px-4 max-[450px]:py-4 overflow-hidden ">
+                <img src="./image/Hero.png" alt="Hero Image" class="w-full h-auto shadow-2xl ">
+                <div class="w-full flex flex-col justify-center ">
+                    <h1
+                        class="text-3xl font-bold text-white text-left mt-6 max-[450px]:text-3xl max-[450px]:mt-4 font-eczar leading-tight">
+                        “दाँतों के दर्द, कीड़े और सड़न को और बढ़ने मत दें—
+                        राहत सिर्फ एक छोटे-से ऑर्डर की दूरी पर है।”
+                    </h1>
+                </div>
+
+            </section>>
+
+            <!-- Solution Section -->
+            <section
+                class="bg-gradient-to-br from-white via-gray-50 to-blue-50 py-12 px-4 max-[450px]:py-8 max-[450px]:px-3 relative overflow-hidden">
                 <div class="container relative z-10">
                     <!-- Section Heading -->
                     <div class="text-center mb-12 max-[450px]:mb-8">
                         <div class="inline-block relative">
                             <h2
                                 class="text-5xl font-eczar font-bold max-[450px]:text-4xl text-brand-primary drop-shadow-lg relative z-10 leading-relaxed">
-                                Mirgi Mukti से
-                                क्या-क्या फर्क महसूस होता है?
+                                आपकी Dental Problems क्यों बढ़ती जा रही हैं?
                             </h2>
                         </div>
-                        <div class="mt-4 flex justify-center">
-                            <div
-                                class="w-24 h-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full animate-pulse">
-                            </div>
-                        </div>
+                        <p
+                            class="text-3xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-2xl text-center mt-4">
+                            क्या आप भी इन परेशानियों से जूझ रहे हैं?
+                        </p>
                     </div>
 
                     <!-- Benefits Grid with Vector Images -->
                     <div class="space-y-12 max-[450px]:space-y-8">
-                        
+
                         <!-- Benefit 1 -->
-                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                        <div
+                            class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
                             <div class="flex flex-col">
                                 <!-- Text Content -->
                                 <div class="p-6 max-[450px]:p-4">
-                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
-                                        मिर्गी का बारंबार होना कम करने में मदद
+                                    <h3
+                                        class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        दाँत का तेज दर्द
                                     </h3>
-                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
-                                        दौरे की आवृत्ति को कम करके आपको बेहतर जीवन की गुणवत्ता प्रदान करता है।
+                                    <p
+                                        class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        दाँत की नसों में सूजन या इंफेक्शन होने से अचानक तेज और चुभन वाला दर्द होता है।
                                     </p>
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/Solve11.avif" alt="मिर्गी का बारंबार होना कम करने में मदद" 
+                                    <img src="./image/solve11.png" alt="मिर्गी का बारंबार होना कम करने में मदद"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Benefit 2 -->
-                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                        <div
+                            class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
                             <div class="flex flex-col">
                                 <!-- Text Content -->
                                 <div class="p-6 max-[450px]:p-4">
-                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
-                                        मस्तिष्क असंतुलन को शांत करना
-                                    </h3>
-                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
-                                        न्यूरल असंतुलन को स्थिर करके मानसिक शांति और स्थिरता लाता है।
+                                    <h3
+                                        class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        ब्रश करते समय दाँतों से खून </h3>
+                                    <p
+                                        class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        कमजोर या सूजे हुए मसूड़ों के कारण ब्रश करते समय खून आने लगता है।
                                     </p>
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/Solve12.avif" alt="मस्तिष्क असंतुलन को शांत करना" 
+                                    <img src="./image/solve12.png" alt="मस्तिष्क असंतुलन को शांत करना"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Benefit 3 -->
-                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                        <div
+                            class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
                             <div class="flex flex-col">
                                 <!-- Text Content -->
                                 <div class="p-6 max-[450px]:p-4">
-                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
-                                        बेहोशी से गिरने के अवसरों को कम करना
+                                    <h3
+                                        class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        दाँतों में कीड़े (Cavity)
                                     </h3>
-                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
-                                        अचानक बेहोशी और गिरने की घटनाओं को रोकने में सहायक।
+                                    <p
+                                        class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        बैक्टीरिया दाँतों को नुकसान पहुँचाते हैं जिससे छोटे-छोटे छेद बनकर कैविटी बनती
+                                        है।
                                     </p>
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/Solve13.avif" alt="बेहोशी से गिरने के अवसरों को कम करना" 
+                                    <img src="./image/solve13.png" alt="बेहोशी से गिरने के अवसरों को कम करना"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Benefit 4 -->
-                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                        <div
+                            class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
                             <div class="flex flex-col">
                                 <!-- Text Content -->
                                 <div class="p-6 max-[450px]:p-4">
-                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
-                                        दौरे आने की तीव्रता कम करना
+                                    <h3
+                                        class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        दाँतों की सड़न
                                     </h3>
-                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
-                                        जब दौरे आते हैं तो उनकी तीव्रता और समयावधि को कम करता है।
+                                    <p
+                                        class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        लंबे समय तक प्लाक और बैक्टीरिया जमा रहने से दाँत धीरे-धीरे सड़ने लगते हैं।
                                     </p>
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/Solve14.avif" alt="दौरे आने की तीव्रता कम करना" 
+                                    <img src="./image/solve14.png" alt="दौरे आने की तीव्रता कम करना"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Benefit 5 -->
-                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                        <div
+                            class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
                             <div class="flex flex-col">
                                 <!-- Text Content -->
                                 <div class="p-6 max-[450px]:p-4">
-                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
-                                        कांपना + घबराहट + चिंता में राहत
+                                    <h3
+                                        class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        मसूड़ों में सूजन और infection
                                     </h3>
-                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
-                                        शारीरिक कंपकंपी, मानसिक घबराहट और चिंता से मुक्ति दिलाता है।
+                                    <p
+                                        class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        मसूड़ों में बैक्टीरियल इन्फेक्शन होने पर दर्द, लालिमा और सूजन बढ़ जाती है।
                                     </p>
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/Solve15.avif" alt="कांपना + घबराहट + चिंता में राहत" 
+                                    <img src="./image/solve15.png" alt="कांपना + घबराहट + चिंता में राहत"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Benefit 6 -->
-                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                        <div
+                            class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
                             <div class="flex flex-col">
                                 <!-- Text Content -->
                                 <div class="p-6 max-[450px]:p-4">
-                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
-                                        Stroke के बाद होने वाले छोटे दौरा में आयुर्वेदिक सहायता
+                                    <h3
+                                        class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        दाँतों में Hot–Cold Sensitivity
                                     </h3>
-                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
-                                        स्ट्रोक के बाद होने वाले मिनी सीजर्स को नियंत्रित करने में प्राकृतिक सहायता।
+                                    <p
+                                        class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        दाँत की ऊपरी परत कमजोर होने से ठंडा–गरम लगते ही तुरंत तेज झनझनाहट होती है।
                                     </p>
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/Solve16.avif" alt="Stroke के बाद होने वाले छोटे दौरा में आयुर्वेदिक सहायता" 
+                                    <img src="./image/solve16.png"
+                                        alt="Stroke के बाद होने वाले छोटे दौरा में आयुर्वेदिक सहायता"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
                         </div>
 
                         <!-- Benefit 7 -->
-                        <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
+                        <div
+                            class="group bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition-all duration-500 border-2 border-gray-100">
                             <div class="flex flex-col">
                                 <!-- Text Content -->
                                 <div class="p-6 max-[450px]:p-4">
-                                    <h3 class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
-                                        दीर्घकालिक तंत्रिका सुरक्षा
+                                    <h3
+                                        class="text-4xl font-eczar font-bold text-brand-primary mb-4 max-[450px]:text-3xl text-center">
+                                        दाँत हिलने लगे हैं
                                     </h3>
-                                    <p class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
-                                        लंबे समय तक न्यूरल सिस्टम की सुरक्षा और मजबूती प्रदान करता है।
+                                    <p
+                                        class="text-2xl font-eczar text-gray-700 leading-relaxed max-[450px]:text-xl text-center">
+                                        मसूड़ों की बीमारी या हड्डी कमजोर होने से दाँत अपनी पकड़ खोकर हिलने लगते हैं।
                                     </p>
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/Solve17.avif" alt="दीर्घकालिक तंत्रिका सुरक्षा" 
+                                    <img src="./image/solve17.png" alt="दीर्घकालिक तंत्रिका सुरक्षा"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </section>
+
+            <!-- Emotional Connect Section -->
+            <section
+                class="bg-gradient-to-br  from-brand-light via-white to-brand-light px-4 py-12 max-[450px]:py-10 max-[450px]:px-3">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Container with rounded design -->
+                    <div class="bg-white shadow-2xl overflow-hidden max-[450px]:rounded-3xl lg:rounded-t-3xl">
+                        <!-- Header with bg-brand-primary and bottom rounded corners -->
+                        <div
+                            class="bg-brand-primary text-white text-center py-8 px-6 rounded-bl-3xl rounded-br-3xl max-[450px]:py-6 max-[450px]:px-4">
+                            <h2 class="text-4xl font-black font-eczar leading-tight max-[450px]:text-3xl">
+                                जब मुस्कान दर्द में बदल जाए
+                            </h2>
+                        </div>
+
+                        <!-- Image - No gap between header and image -->
+                        <div class="w-full">
+                            <img src="./image/men_pain.png" alt="Man suffering from dental pain"
+                                class="w-full h-80 object-cover max-[450px]:h-64">
+                        </div>
+
+                        <!-- Content below image -->
+                        <div class="p-10 rounded-b-3xl  bg-brand-secondary max-[450px]:p-8">
+                            <div class="space-y-6 max-[450px]:space-y-4">
+                                <div
+                                    class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-l-4 border-brand-primary max-[450px]:p-4">
+                                    <div class="flex items-start gap-4">
+                                        <div class="text-2xl max-[450px]:text-xl">😣</div>
+                                        <div>
+                                            <p
+                                                class="text-gray-800 font-eczar text-2xl leading-relaxed max-[450px]:text-xl">
+                                                <span class="font-bold text-brand-primary">दाँतों में दर्द के कारण खाना
+                                                    ठीक से नहीं
+                                                    खा पाना…</span>
+                                            </p>
+                                            <p class="text-gray-600 font-eczar text-xl mt-2 max-[450px]:text-lg">
+                                                हर निवाला दर्द का एहसास दिलाता है
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-l-4 border-brand-primary max-[450px]:p-4">
+                                    <div class="flex items-start gap-4">
+                                        <div class="text-2xl max-[450px]:text-xl">😰</div>
+                                        <div>
+                                            <p
+                                                class="text-gray-800 font-eczar text-2xl leading-relaxed max-[450px]:text-xl">
+                                                <span class="font-bold text-brand-primary">और cavity के कारण दाँत सड़ते
+                                                    देखना…</span>
+                                            </p>
+                                            <p class="text-gray-600 font-eczar text-xl mt-2 max-[450px]:text-lg">
+                                                आपकी मुस्कान छुप जाती है शर्म के पीछे
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-l-4 border-brand-primary max-[450px]:p-4">
+                                    <div class="flex items-start gap-4">
+                                        <div class="text-2xl max-[450px]:text-xl">😔</div>
+                                        <div>
+                                            <p
+                                                class="text-gray-800 font-eczar text-xl leading-relaxed max-[450px]:text-lg">
+                                                <span class="font-bold text-brand-primary">ये सब चीजें धीरे-धीरे आपकी
+                                                    दिनचर्या,
+                                                    आत्मविश्वास और मुस्कान पर असर डालती हैं।</span>
+                                            </p>
+                                            <p class="text-gray-600 font-eczar text-xl mt-2 max-[450px]:text-lg">
+                                                जीवन की खुशी कम होने लगती है
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Call to Action -->
+                            <div
+                                class="mt-8 text-center bg-gradient-to-r from-brand-primary to-brand-secondary rounded-3xl p-6 max-[450px]:mt-6 max-[450px]:p-4">
+                                <h3
+                                    class="text-3xl font-bold text-white font-eczar mb-3 max-[450px]:text-2xl max-[450px]:mb-2">
+                                    💙 आपका दर्द हमें समझ आता है
+                                </h3>
+                                <p class="text-white font-eczar text-xl leading-relaxed max-[450px]:text-lg">
+                                    इसीलिए हमने लाया है प्राकृतिक और सुरक्षित समाधान<br>
+                                    <span class="font-bold text-brand-light">ताकि आपकी मुस्कान वापस लौट आए!</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Who Should Use This Section -->
+            <section
+                class="bg-gradient-to-br from-brand-light via-white to-brand-light px-4 py-12 max-[450px]:py-10 max-[450px]:px-3">
+                <div class="max-w-5xl mx-auto">
+                    <div
+                        class="bg-white rounded-[3rem] p-10 shadow-[0_30px_100px_rgba(33,86,132,0.15)] border-8 border-brand-primary max-[450px]:p-8 max-[450px]:rounded-3xl max-[450px]:border-6 backdrop-blur-sm bg-white/98">
+
+                        <!-- Header -->
+                        <div class="text-center mb-2 max-[450px]:mb-2">
+                            <h2
+                                class="text-5xl font-bold text-brand-primary bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-primary bg-clip-text font-eczar mb-6 max-[450px]:text-4xl max-[450px]:mb-4 leading-tight">
+                                किसे ज़रूर इस्तेमाल करना चाहिए?
+                            </h2>
+                            <div
+                                class="w-40 h-3 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full mx-auto max-[450px]:w-32 max-[450px]:h-2">
+                            </div>
+                            <p
+                                class="text-brand-primary font-eczar text-xl font-semibold mt-6 max-[450px]:text-lg max-[450px]:mt-4">
+                                यह Combo विशेष रूप से उनके लिए है जिनको—
+                            </p>
+                        </div>
+
+                        <!-- Target Customer List -->
+                        <div class="space-y-6 max-[450px]:space-y-4">
+
+                            <!-- Customer Type 1: Constant tooth pain -->
+                            <div
+                                class="bg-gradient-to-r from-red-50 to-pink-50 rounded-3xl p-8 border-l-8 border-red-500 shadow-xl transform hover:scale-105 transition-all duration-300 max-[450px]:p-6 max-[450px]:rounded-2xl group">
+                                <div class="flex items-center gap-6 max-[450px]:gap-4">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="w-16 h-16 bg-red-500 text-white rounded-full flex items-center justify-center text-2xl font-bold group-hover:rotate-12 transition-transform duration-300 max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-xl">
+                                            😣
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3
+                                            class="text-2xl font-bold text-red-600 font-eczar mb-3 max-[450px]:text-xl max-[450px]:mb-2">
+                                            लगातार दाँत में दर्द रहता है
+                                        </h3>
+                                        <p
+                                            class="text-gray-700 font-eczar text-lg leading-relaxed max-[450px]:text-base">
+                                            जिन्हें रोजाना दाँत दर्द की समस्या से परेशानी होती है और तुरंत प्राकृतिक
+                                            राहत चाहिए
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Customer Type 2: Bleeding gums -->
+                            <div
+                                class="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-3xl p-8 border-l-8 border-orange-500 shadow-xl transform hover:scale-105 transition-all duration-300 max-[450px]:p-6 max-[450px]:rounded-2xl group">
+                                <div class="flex items-center gap-6 max-[450px]:gap-4">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="w-16 h-16 bg-orange-500 text-white rounded-full flex items-center justify-center text-2xl font-bold group-hover:rotate-12 transition-transform duration-300 max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-xl">
+                                            🩸
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3
+                                            class="text-2xl font-bold text-orange-600 font-eczar mb-3 max-[450px]:text-xl max-[450px]:mb-2">
+                                            मसूड़ों से खून आता है
+                                        </h3>
+                                        <p
+                                            class="text-gray-700 font-eczar text-lg leading-relaxed max-[450px]:text-base">
+                                            ब्रश करते समय या खाना चबाते समय मसूड़ों से रक्तस्राव की समस्या से परेशान लोग
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Customer Type 3: Decay and cavities -->
+                            <div
+                                class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-3xl p-8 border-l-8 border-purple-500 shadow-xl transform hover:scale-105 transition-all duration-300 max-[450px]:p-6 max-[450px]:rounded-2xl group">
+                                <div class="flex items-center gap-6 max-[450px]:gap-4">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="w-16 h-16 bg-purple-500 text-white rounded-full flex items-center justify-center text-2xl font-bold group-hover:rotate-12 transition-transform duration-300 max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-xl">
+                                            🦷
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3
+                                            class="text-2xl font-bold text-purple-600 font-eczar mb-3 max-[450px]:text-xl max-[450px]:mb-2">
+                                            दाँत में सड़न और cavity बढ़ रही है
+                                        </h3>
+                                        <p
+                                            class="text-gray-700 font-eczar text-lg leading-relaxed max-[450px]:text-base">
+                                            जिनके दाँतों में छेद हो रहे हैं और सड़न की समस्या दिन-ब-दिन बढ़ती जा रही है
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Customer Type 4: Weak teeth and gums -->
+                            <div
+                                class="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-3xl p-8 border-l-8 border-blue-500 shadow-xl transform hover:scale-105 transition-all duration-300 max-[450px]:p-6 max-[450px]:rounded-2xl group">
+                                <div class="flex items-center gap-6 max-[450px]:gap-4">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="w-16 h-16 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold group-hover:rotate-12 transition-transform duration-300 max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-xl">
+                                            😰
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3
+                                            class="text-2xl font-bold text-blue-600 font-eczar mb-3 max-[450px]:text-xl max-[450px]:mb-2">
+                                            दाँत और मसूड़े कमजोर हो रहे हैं
+                                        </h3>
+                                        <p
+                                            class="text-gray-700 font-eczar text-lg leading-relaxed max-[450px]:text-base">
+                                            जिनके दाँत हिलते हैं और मसूड़े कमजोर होकर दाँतों की पकड़ छोड़ रहे हैं
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Customer Type 5: Natural solution seekers -->
+                            <div
+                                class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-8 border-l-8 border-brand-muted shadow-xl transform hover:scale-105 transition-all duration-300 max-[450px]:p-6 max-[450px]:rounded-2xl group">
+                                <div class="flex items-center gap-6 max-[450px]:gap-4">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="w-16 h-16 bg-brand-muted text-white rounded-full flex items-center justify-center text-2xl font-bold group-hover:rotate-12 transition-transform duration-300 max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-xl">
+                                            🌿
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3
+                                            class="text-2xl font-bold text-brand-muted font-eczar mb-3 max-[450px]:text-xl max-[450px]:mb-2">
+                                            Dentist ने Treatment की सलाह दी है लेकिन आप natural solution चाहते हैं
+                                        </h3>
+                                        <p
+                                            class="text-gray-700 font-eczar text-lg leading-relaxed max-[450px]:text-base">
+                                            जो प्राकृतिक और सुरक्षित तरीके से अपनी दाँतों की समस्या का समाधान चाहते हैं
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Call to Action -->
+                        <div
+                            class="mt-12 bg-brand-primary  rounded-3xl p-8 text-center shadow-2xl max-[450px]:mt-8 max-[450px]:p-6">
+                            <h3
+                                class="text-3xl font-bold text-white font-eczar mb-4 max-[450px]:text-2xl max-[450px]:mb-3">
+                                🎯 क्या आपकी भी यही समस्या है?
+                            </h3>
+                            <p
+                                class="text-white font-eczar text-xl leading-relaxed mb-6 max-[450px]:text-lg max-[450px]:mb-4">
+                                तो यह Combo खासकर आपके लिए ही बनाया गया है!<br>
+                                <span class="font-bold text-brand-light">प्राकृतिक उपचार से पाएं स्थायी राहत</span>
+                            </p>
+                            <div class="flex justify-center">
+                                <button onclick="scrollToContact()"
+                                    class="bg-white text-brand-primary px-8 py-4 rounded-2xl font-bold text-xl font-eczar hover:scale-105 transition-all duration-300 shadow-lg max-[450px]:px-6 max-[450px]:py-3 max-[450px]:text-lg">
+                                    अभी ऑर्डर करें 🛒
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How to Use Section -->
+            <section
+                class="bg-gradient-to-br from-brand-light via-white to-brand-light px-4 py-6 max-[450px]:py-4 max-[450px]:px-3">
+                <div
+                    class="bg-white rounded-[3rem] p-5  shadow-[0_30px_100px_rgba(33,86,132,0.15)] border-8 border-brand-primary max-w-6xl mx-auto max-[450px]:p-8 max-[450px]:rounded-3xl max-[450px]:border-6 backdrop-blur-sm bg-white/98">
+
+                    <!-- Header -->
+                    <div class="text-center">
+                        <h2
+                            class="text-5xl py-6 max-[450px]:py-4 font-black text-brand-primary via-brand-secondary to-brand-primary bg-clip-text font-eczar mb-4 max-[450px]:text-4xl max-[450px]:mb-3">
+                            HOW TO USE?
+                        </h2>
+                        <div
+                            class="w-32 h-3 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full mx-auto max-[450px]:w-24 max-[450px]:h-2">
+                        </div>
+                        <p class="text-brand-primary font-eczar text-xl font-semibold max-[450px]:text-lg">
+                            सही तरीके से उपयोग करें और बेहतर परिणाम पाएं
+                        </p>
+                    </div>
+
+
+                    <div class="text-center mb-8 max-[450px]:mb-6">
+                        <div
+                            class="inline-block bg-brand-secondary text-white px-6 py-3 rounded-full text-2xl font-bold font-eczar mb-6 max-[450px]:text-xl max-[450px]:px-4 max-[450px]:py-2 max-[450px]:mb-4">
+                            🟢 Dental Drops
+                        </div>
+                        <img src="./image/How2.png" alt="Dental Drops Usage"
+                            class="w-full h-full object-contain w-full h-full mx-full  rounded-3xl p-4 shadow-2xl mb-6 max-[450px]:w-full max-[450px]:h-full max-[450px]:mb-4">
+                    </div>
+
+
+                    <div class="text-center mb-8 max-[450px]:mb-6">
+                        <div
+                            class="inline-block bg-brand-secondary text-white px-6 py-3 rounded-full text-2xl font-bold font-eczar mb-6 max-[450px]:text-xl max-[450px]:px-4 max-[450px]:py-2 max-[450px]:mb-4">
+                            🟣 Oral Detox Capsules
+                        </div>
+                        <div
+                            class="w-auto h-auto mx-auto bg-white rounded-3xl p-4 shadow-2xl mb-6 max-[450px]:w-full max-[450px]:h-full max-[450px]:mb-4">
+                            <img src="./image/How3.png" alt="Oral Detox Capsules Usage"
+                                class="w-full h-full object-contain">
+                        </div>
+                    </div>
+
+                    <!-- Important Note -->
+                    <div
+                        class="mt-6 p-6 bg-brand-secondary p-8 rounded-3xl text-center max-[450px]:mt-4 max-[450px]:p-6">
+                        <h3 class="text-3xl font-bold text-white font-eczar mb-4 max-[450px]:text-2xl max-[450px]:mb-3">
+                            ⚠️ महत्वपूर्ण सुझाव
+                        </h3>
+                        <p class="text-white font-eczar text-lg leading-relaxed max-[450px]:text-base">
+                            3 महीने का कोर्स बेहतर परिणाम देता है |
+                            नियमित उपयोग और धैर्य से बेहतर परिणाम मिलते हैं।<br>
+                            <span class="font-bold text-brand-light">डॉक्टर की सलाह के अनुसार ही उपयोग करें।</span>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Ingredients Section -->
+            <section class="bg-brand-secondary px-4  py-10 max-[450px]:py-8 max-[450px]:px-3">
+                <div class="text-center mb-10 max-[450px]:mb-8">
+                    <h2 class="text-3xl mb-4 font-bold text-brand-accent font-eczar max-[450px]:text-3xl">
+                        🌿 मुख्य जड़ी-बूटियाँ 🌿
+                    </h2>
+                    <p class="text-3xl font-bold text-gray-300 font-eczar  max-[450px]:text-2xl">
+                        प्राकृतिक और शुद्ध आयुर्वेदिक तत्व
+                    </p>
+                    <!-- <p class="text-gray-100 text-lg font-eczar max-[450px]:text-base">
+                    
+                </p> -->
+                    <div class="w-20 h-1 bg-brand-muted mx-auto rounded-full mt-3"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto max-[450px]:gap-8">
+                    <!-- Ingredient 1 - लौंग तेल -->
+                    <div
+                        class="bg-gradient-to-br from-brand-light to-white rounded-3xl p-6 shadow-xl border border-brand-secondary/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 max-[450px]:p-8 max-[450px]:rounded-2xl max-[450px]:bg-gradient-to-b max-[450px]:from-yellow-50 max-[450px]:to-orange-50 max-[450px]:border-4 max-[450px]:border-orange-200">
+                        <div class="text-center max-[450px]:space-y-6">
+                            <div
+                                class="w-24 h-24 mx-auto mb-4 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden max-[450px]:w-40 max-[450px]:h-40 max-[450px]:mb-6 max-[450px]:shadow-2xl max-[450px]:border-4 max-[450px]:border-orange-300">
+                                <img src="./image/Ind1.png" alt="लौंग तेल"
+                                    class="w-20 h-20 object-cover rounded-full max-[450px]:w-36 max-[450px]:h-36">
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-4xl max-[450px]:mb-4">
+                                लौंग तेल
+                            </h3>
+                            <div
+                                class="bg-brand-primary/10 p-3 rounded-lg border-l-4 border-brand-primary max-[450px]:p-6 max-[450px]:rounded-2xl max-[450px]:border-l-8 max-[450px]:bg-orange-100/80">
+                                <p
+                                    class="text-gray-700 font-eczar text-base leading-relaxed max-[450px]:text-2xl max-[450px]:leading-loose max-[450px]:font-bold">
+                                    दाँत के दर्द और कीड़े रोकता है
+                                </p>
+                            </div>
+                            <div class="mt-3 flex justify-center max-[450px]:mt-6">
+                                <span
+                                    class="bg-brand-primary text-white px-3 py-1 rounded-full text-sm font-semibold max-[450px]:px-6 max-[450px]:py-3 max-[450px]:text-xl max-[450px]:rounded-2xl max-[450px]:bg-orange-500">
+                                    ✨ Natural Pain Relief
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ingredient 2 - नीम एक्सट्रैक्ट -->
+                    <div
+                        class="bg-gradient-to-br from-brand-light to-white rounded-3xl p-6 shadow-xl border border-brand-secondary/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 max-[450px]:p-8 max-[450px]:rounded-2xl max-[450px]:bg-gradient-to-b max-[450px]:from-green-50 max-[450px]:to-emerald-50 max-[450px]:border-4 max-[450px]:border-green-200">
+                        <div class="text-center max-[450px]:space-y-6">
+                            <div
+                                class="w-24 h-24 mx-auto mb-4 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden max-[450px]:w-40 max-[450px]:h-40 max-[450px]:mb-6 max-[450px]:shadow-2xl max-[450px]:border-4 max-[450px]:border-green-300">
+                                <img src="./image/Ind2.png" alt="नीम एक्सट्रैक्ट"
+                                    class="w-20 h-20 object-cover rounded-full max-[450px]:w-36 max-[450px]:h-36">
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-4xl max-[450px]:mb-4">
+                                नीम एक्सट्रैक्ट
+                            </h3>
+                            <div
+                                class="bg-brand-secondary/10 p-3 rounded-lg border-l-4 border-brand-secondary max-[450px]:p-6 max-[450px]:rounded-2xl max-[450px]:border-l-8 max-[450px]:bg-green-100/80">
+                                <p
+                                    class="text-gray-700 font-eczar text-base leading-relaxed max-[450px]:text-2xl max-[450px]:leading-loose max-[450px]:font-bold">
+                                    दाँत में infection रोकता है
+                                </p>
+                            </div>
+                            <div class="mt-3 flex justify-center max-[450px]:mt-6">
+                                <span
+                                    class="bg-brand-secondary text-white px-3 py-1 rounded-full text-sm font-semibold max-[450px]:px-6 max-[450px]:py-3 max-[450px]:text-xl max-[450px]:rounded-2xl max-[450px]:bg-green-500">
+                                    🛡️ Anti-Bacterial
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ingredient 3 - मंजिष्ठा -->
+                    <div
+                        class="bg-gradient-to-br from-brand-light to-white rounded-3xl p-6 shadow-xl border border-brand-secondary/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 max-[450px]:p-8 max-[450px]:rounded-2xl max-[450px]:bg-gradient-to-b max-[450px]:from-purple-50 max-[450px]:to-indigo-50 max-[450px]:border-4 max-[450px]:border-purple-200">
+                        <div class="text-center max-[450px]:space-y-6">
+                            <div
+                                class="w-24 h-24 mx-auto mb-4 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden max-[450px]:w-40 max-[450px]:h-40 max-[450px]:mb-6 max-[450px]:shadow-2xl max-[450px]:border-4 max-[450px]:border-purple-300">
+                                <img src="./image/Ind3.png" alt="मंजिष्ठा"
+                                    class="w-20 h-20 object-cover rounded-full max-[450px]:w-36 max-[450px]:h-36">
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-4xl max-[450px]:mb-4">
+                                मंजिष्ठा
+                            </h3>
+                            <div
+                                class="bg-brand-muted/10 p-3 rounded-lg border-l-4 border-brand-primary  max-[450px]:p-6 max-[450px]:rounded-2xl max-[450px]:border-l-8 max-[450px]:bg-purple-100/80">
+                                <p
+                                    class="text-gray-700 font-eczar text-base leading-relaxed max-[450px]:text-2xl max-[450px]:leading-loose max-[450px]:font-bold">
+                                    दाँतों और मसूड़ों को मजबूत
+                                </p>
+                            </div>
+                            <div class="mt-3 flex justify-center max-[450px]:mt-6">
+                                <span
+                                    class="bg-brand-primary text-white px-3 py-1 rounded-full text-sm font-semibold max-[450px]:bg-gradient-to-b from-purple-400 to-purple-500 max-[450px]:px-6 max-[450px]:py-3 max-[450px]:text-xl max-[450px]:rounded-2xl max-[450px]:bg-purple-500">
+                                    💪 Strengthening
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ingredient 4 - त्रिफला -->
+                    <div
+                        class="bg-gradient-to-br from-brand-light to-white rounded-3xl p-6 shadow-xl border border-brand-secondary/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 max-[450px]:p-8 max-[450px]:rounded-2xl max-[450px]:bg-gradient-to-b max-[450px]:from-blue-50 max-[450px]:to-cyan-50 max-[450px]:border-4 max-[450px]:border-blue-200">
+                        <div class="text-center max-[450px]:space-y-6">
+                            <div
+                                class="w-24 h-24 mx-auto mb-4 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden max-[450px]:w-40 max-[450px]:h-40 max-[450px]:mb-6 max-[450px]:shadow-2xl max-[450px]:border-4 max-[450px]:border-blue-300">
+                                <img src="./image/Ind4.png" alt="त्रिफला"
+                                    class="w-20 h-20 object-cover rounded-full max-[450px]:w-36 max-[450px]:h-36">
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-4xl max-[450px]:mb-4">
+                                त्रिफला
+                            </h3>
+                            <div
+                                class="bg-purple-100 p-3 rounded-lg border-l-4 border-brand-secondary  max-[450px]:p-6 max-[450px]:rounded-2xl max-[450px]:border-l-8 max-[450px]:bg-blue-100/80">
+                                <p
+                                    class="text-gray-700 font-eczar text-base leading-relaxed max-[450px]:text-2xl max-[450px]:leading-loose max-[450px]:font-bold">
+                                    दाँतों और मसूड़ों से toxin की सफाई
+                                </p>
+                            </div>
+                            <div class="mt-3 flex justify-center max-[450px]:mt-6">
+                                <span
+                                    class="bg-brand-secondary max-[450px]:bg-gradient-to-b from-blue-400 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold max-[450px]:px-6 max-[450px]:py-3 max-[450px]:text-xl max-[450px]:rounded-2xl max-[450px]:bg-blue-500">
+                                    🧹 Detoxifying
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ingredient 5 - मुलेठी -->
+                    <div
+                        class="bg-gradient-to-br from-brand-light to-white rounded-3xl p-6 shadow-xl border border-brand-secondary/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 max-[450px]:p-8 max-[450px]:rounded-2xl max-[450px]:bg-gradient-to-b max-[450px]:from-rose-50 max-[450px]:to-pink-50 max-[450px]:border-4 max-[450px]:border-rose-200 md:col-span-2 lg:col-span-1">
+                        <div class="text-center max-[450px]:space-y-6">
+                            <div
+                                class="w-24 h-24 mx-auto mb-4 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden max-[450px]:w-40 max-[450px]:h-40 max-[450px]:mb-6 max-[450px]:shadow-2xl max-[450px]:border-4 max-[450px]:border-rose-300">
+                                <img src="./image/Ind5.png" alt="मुलेठी"
+                                    class="w-20 h-20 object-cover rounded-full max-[450px]:w-36 max-[450px]:h-36">
+                            </div>
+                            <h3
+                                class="text-xl font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-4xl max-[450px]:mb-4">
+                                मुलेठी
+                            </h3>
+                            <div
+                                class="bg-orange-100 p-3 rounded-lg border-l-4 border-orange-500 max-[450px]:p-6 max-[450px]:rounded-2xl max-[450px]:border-l-8 max-[450px]:bg-rose-100/80">
+                                <p
+                                    class="text-gray-700 font-eczar text-base leading-relaxed max-[450px]:text-2xl max-[450px]:leading-loose max-[450px]:font-bold">
+                                    मसूड़ों से सूजन कम
+                                </p>
+                            </div>
+                            <div class="mt-3 flex justify-center max-[450px]:mt-6">
+                                <span
+                                    class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold max-[450px]:px-6 max-[450px]:py-3 max-[450px]:text-xl max-[450px]:rounded-2xl max-[450px]:bg-rose-500">
+                                    🌱 Anti-Inflammatory
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Section -->
+                <div class="text-center mt-10 max-[450px]:mt-8">
+                    <div
+                        class="bg-gradient-to-r from-brand-primary to-brand-secondary p-6 rounded-2xl max-w-3xl mx-auto text-white max-[450px]:p-4">
+                        <h3 class="text-2xl font-bold font-eczar mb-3 max-[450px]:text-xl">
+                            ✨ 100% प्राकृतिक और सुरक्षित ✨
+                        </h3>
+                        <p class="text-lg font-eczar leading-relaxed max-[450px]:text-base">
+                            ये सभी जड़ी-बूटियाँ हजारों सालों से आयुर्वेद में इस्तेमाल होती आई हैं।
+                            कोई साइड इफेक्ट नहीं, केवल प्राकृतिक healing।
+                        </p>
+                        <div class="flex justify-center gap-4 mt-4 text-2xl max-[450px]:text-xl">
+                            🌿 ✅ 💚 🌱 ⚡
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brand Values Trust Section -->
+            <section
+                class="bg-gradient-to-br  from-brand-light via-white to-brand-light px-4 py-4 max-[450px]:py-4 max-[450px]:px-3 relative overflow-hidden">
+                <!-- Main Container -->
+                <div
+                    class="relative bg-white rounded-[3rem] py-6 max-[450px]:py-8  shadow-[0_30px_100px_rgba(33,86,132,0.15)] border-8 border-brand-primary max-w-6xl mx-auto max-[450px]:px-10 max-[450px]:rounded-3xl max-[450px]:border-6 backdrop-blur-sm bg-white/98">
+
+                    <!-- Enhanced Header -->
+                    <div class="text-center mb-16 max-[450px]:mb-12">
+                        <p
+                            class="text-brand-primary font-eczar text-2xl font-semibold max-[450px]:text-2xl max-[450px]:mt-4">
+                            हमारी गुणवत्ता और विश्वसनीयता के प्रमाण
+                        </p>
+                    </div>
+
+                    <!-- Enhanced Brand Values Grid -->
+                    <div
+                        class="grid grid-cols-2 lg:grid-cols-2 gap-6 items-center justify-items-center mb-5 max-[450px]:grid-cols-2 max-[450px]:gap-20 max-[450px]:mb-4">
+
+                        <!-- Brand Value 1: 100% Ayurvedic -->
+                        <div
+                            class="flex flex-col items-center group transform transition-all duration-700 hover:scale-110 hover:rotate-2">
+                            <div class="relative">
+                                <div
+                                    class="w-40 h-40 bg-gradient-to-br from-brand-primary/10 via-brand-secondary/20 to-brand-light/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-700 border-4 border-brand-primary/30 backdrop-blur-sm max-[450px]:w-48 max-[450px]:h-48 max-[450px]:p-8">
+                                    <img src="./image/Trust1.png" alt="100% Ayurvedic"
+                                        class="w-full h-full object-contain filter drop-shadow-2xl">
+                                </div>
+                                <div
+                                    class="absolute -top-3 -right-3 bg-brand-muted text-white text-sm font-bold px-3 py-2 rounded-full animate-pulse shadow-lg max-[450px]:text-base max-[450px]:px-4 max-[450px]:py-2">
+                                    ✓ PURE
+                                </div>
+                            </div>
+                            <div class="mt-6 text-center max-[450px]:mt-8">
+                                <h4 class="text-lg font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-xl">
+                                    100% आयुर्वेदिक
+                                </h4>
+                                <p class="text-sm text-gray-600 font-eczar max-[450px]:text-base">प्राकृतिक जड़ी-बूटियों
+                                    से निर्मित
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Brand Value 2: Lab Tested -->
+                        <div
+                            class="flex flex-col items-center group transform transition-all duration-700 hover:scale-110 hover:rotate-2">
+                            <div class="relative">
+                                <div
+                                    class="w-40 h-40 bg-gradient-to-br from-brand-secondary/10 via-brand-primary/20 to-brand-light/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-700 border-4 border-brand-secondary/30 backdrop-blur-sm max-[450px]:w-48 max-[450px]:h-48 max-[450px]:p-8">
+                                    <img src="./image/Trust2.png" alt="Lab Tested"
+                                        class="w-full h-full object-contain filter drop-shadow-2xl">
+                                </div>
+                                <div
+                                    class="absolute -top-3 -right-3 bg-brand-primary text-white text-sm font-bold px-3 py-2 rounded-full animate-pulse shadow-lg max-[450px]:text-base max-[450px]:px-4 max-[450px]:py-2">
+                                    ✓ TESTED
+                                </div>
+                            </div>
+                            <div class="mt-6 text-center max-[450px]:mt-8">
+                                <h4 class="text-lg font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-xl">लैब
+                                    टेस्टेड
+                                </h4>
+                                <p class="text-sm text-gray-600 font-eczar max-[450px]:text-base">वैज्ञानिक रूप से
+                                    प्रमाणित</p>
+                            </div>
+                        </div>
+
+                        <!-- Brand Value 3: Safe & Secure -->
+                        <div
+                            class="flex flex-col items-center group transform transition-all duration-700 hover:scale-110 hover:rotate-2">
+                            <div class="relative">
+                                <div
+                                    class="w-40 h-40 bg-gradient-to-br from-brand-muted/10 via-brand-primary/20 to-brand-light/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-700 border-4 border-brand-muted/30 backdrop-blur-sm max-[450px]:w-48 max-[450px]:h-48 max-[450px]:p-8">
+                                    <img src="./image/Trust3.png" alt="Safe & Secure"
+                                        class="w-full h-full object-contain filter drop-shadow-2xl">
+                                </div>
+                                <div
+                                    class="absolute -top-3 -right-3 bg-brand-secondary text-white text-sm font-bold px-3 py-2 rounded-full animate-pulse shadow-lg max-[450px]:text-base max-[450px]:px-4 max-[450px]:py-2">
+                                    ✓ SAFE
+                                </div>
+                            </div>
+                            <div class="mt-6 text-center max-[450px]:mt-8">
+                                <h4 class="text-lg font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-xl">
+                                    सुरक्षित</h4>
+                                <p class="text-sm text-gray-600 font-eczar max-[450px]:text-base">कोई साइड इफेक्ट नहीं
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Brand Value 4: Quality Assured -->
+                        <div
+                            class="flex flex-col items-center group transform transition-all duration-700 hover:scale-110 hover:rotate-2">
+                            <div class="relative">
+                                <div
+                                    class="w-40 h-40 bg-gradient-to-br from-brand-primary/10 via-brand-muted/20 to-brand-light/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-700 border-4 border-brand-primary/30 backdrop-blur-sm max-[450px]:w-48 max-[450px]:h-48 max-[450px]:p-8">
+                                    <img src="./image/Trust4.png" alt="Quality Assured"
+                                        class="w-full h-full object-contain filter drop-shadow-2xl">
+                                </div>
+                                <div
+                                    class="absolute -top-3 -right-3 bg-brand-muted text-white text-sm font-bold px-3 py-2 rounded-full animate-pulse shadow-lg max-[450px]:text-base max-[450px]:px-4 max-[450px]:py-2">
+                                    ✓ QUALITY
+                                </div>
+                            </div>
+                            <div class="mt-6 text-center max-[450px]:mt-8">
+                                <h4 class="text-lg font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-xl">
+                                    गुणवत्ता
+                                    आश्वासन</h4>
+                                <p class="text-sm text-gray-600 font-eczar max-[450px]:text-base">उच्चतम मानक</p>
+                            </div>
+                        </div>
+
+                        <!-- Brand Value 5: ISO Certified -->
+                        <div
+                            class="flex flex-col items-center group transform transition-all duration-700 hover:scale-110 hover:rotate-2">
+                            <div class="relative">
+                                <div
+                                    class="w-40 h-40 bg-gradient-to-br from-brand-secondary/10 via-brand-muted/20 to-brand-light/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-700 border-4 border-brand-secondary/30 backdrop-blur-sm max-[450px]:w-48 max-[450px]:h-48 max-[450px]:p-8">
+                                    <img src="./image/Trust5.png" alt="ISO Certified"
+                                        class="w-full h-full object-contain filter drop-shadow-2xl">
+                                </div>
+                                <div
+                                    class="absolute -top-3 -right-3 bg-brand-primary text-white text-sm font-bold px-3 py-2 rounded-full animate-pulse shadow-lg max-[450px]:text-base max-[450px]:px-4 max-[450px]:py-2">
+                                    ✓ ISO
+                                </div>
+                            </div>
+                            <div class="mt-6 text-center max-[450px]:mt-8">
+                                <h4 class="text-lg font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-xl">ISO
+                                    प्रमाणित
+                                </h4>
+                                <p class="text-sm text-gray-600 font-eczar max-[450px]:text-base">अंतर्राष्ट्रीय मानक
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Brand Value 6: GMP Certified -->
+                        <div
+                            class="flex flex-col items-center group transform transition-all duration-700 hover:scale-110 hover:rotate-2">
+                            <div class="relative">
+                                <div
+                                    class="w-40 h-40 bg-gradient-to-br from-brand-muted/10 via-brand-secondary/20 to-brand-light/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-700 border-4 border-brand-muted/30 backdrop-blur-sm max-[450px]:w-48 max-[450px]:h-48 max-[450px]:p-8">
+                                    <img src="./image/Trust6.png" alt="GMP Certified"
+                                        class="w-full h-full object-contain filter drop-shadow-2xl">
+                                </div>
+                                <div
+                                    class="absolute -top-3 -right-3 bg-brand-secondary text-white text-sm font-bold px-3 py-2 rounded-full animate-pulse shadow-lg max-[450px]:text-base max-[450px]:px-4 max-[450px]:py-2">
+                                    ✓ GMP
+                                </div>
+                            </div>
+                            <div class="mt-6 text-center max-[450px]:mt-8">
+                                <h4 class="text-lg font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-xl">GMP
+                                    प्रमाणित
+                                </h4>
+                                <p class="text-sm text-gray-600 font-eczar max-[450px]:text-base">उत्पादन मानक</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Doctor Recommendation Section -->
+            <section class="bg-white px-4 py-8 max-[450px]:py-6 max-[450px]:px-3">
+                <div class="text-center mb-8 max-[450px]:mb-6">
+                    <h2 class="text-3xl font-bold text-brand-primary font-tiro mb-2 max-[450px]:text-2xl">
+                        👨‍⚕️ DOCTOR RECOMMENDATION SECTION
+                    </h2>
+                    <div class="w-20 h-1 bg-brand-secondary mx-auto rounded-full"></div>
+                </div>
+
+                <div class="space-y-8 max-w-4xl mx-auto">
+                    <!-- Doctor 1 Recommendation -->
+                    <div
+                        class="bg-brand-light rounded-2xl p-6 shadow-xl border-l-4 border-brand-primary max-[450px]:p-4">
+                        <div class="flex flex-col md:flex-col justify-center gap-6 max-[450px]:gap-4">
+                            <div class="flex flex-col md:flex-row justify-center gap-6 max-[450px]:gap-4">
+                                <!-- Doctor Image -->
+                                <div class="flex-shrink-0 text-center md:text-center">
+                                    <div
+                                        class="w-32 h-32 mx-auto md:mx-0 rounded-full overflow-hidden flex justify-center border-4 border-brand-secondary shadow-lg max-[450px]:w-24 max-[450px]:h-24">
+                                        <img src="./image/doctor2.webp" alt="Dr. Arvind Mehta"
+                                            class="w-full h-full object-top">
+                                    </div>
+                                </div>
+                                <div class="mb-4 max-[450px]:mb-3">
+                                    <h3
+                                        class="text-2xl font-bold text-brand-primary font-tiro mb-1 max-[450px]:text-xl">
+                                        👨‍⚕️ Dr. Arvind Mehta
+                                    </h3>
+                                    <p class="text-brand-secondary font-semibold text-lg max-[450px]:text-base">
+                                        (BDS, MDS – Dental Surgeon)
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <!-- Doctor Info & Testimonial -->
+                            <div class="flex-1">
+
+
+                                <div
+                                    class="bg-white p-4 rounded-xl shadow-inner border border-brand-secondary/20 max-[450px]:p-3">
+                                    <div class="text-4xl text-brand-primary mb-2 max-[450px]:text-3xl">❝</div>
+                                    <p
+                                        class="text-gray-700 font-tiro leading-relaxed text-lg mb-4 max-[450px]:text-base max-[450px]:mb-3">
+                                        "ज्यादातर लोग सड़न, कीड़े और मसूड़ों से खून को हल्का समझ लेते हैं… लेकिन ये
+                                        शुरूआती संकेत होते हैं बड़े dental damage के।
+                                        मैंने Dental Repair Combo की formulation देखी है—
+                                    </p>
+                                    <div class="space-y-2 mb-4 max-[450px]:mb-3">
+                                        <p class="text-brand-primary font-semibold flex items-start gap-2">
+                                            <span class="text-green-600">✔</span>
+                                            <span class="font-tiro">Dental Drops सीधे infection पर काम करती हैं</span>
+                                        </p>
+                                        <p class="text-brand-primary font-semibold flex items-start gap-2">
+                                            <span class="text-green-600">✔</span>
+                                            <span class="font-tiro">Oral Detox Capsules अंदरूनी toxin को साफ करके
+                                                मसूड़ों को मजबूत करती हैं</span>
+                                        </p>
+                                    </div>
+                                    <p class="text-gray-700 font-tiro leading-relaxed text-lg max-[450px]:text-base">
+                                        यह combination clinical approach जैसा असर देता है, इसलिए मैं इसे ऐसे patients को
+                                        recommend करता हूँ जिन्हें बार-बार cavity, sensitivity या bleeding gums की
+                                        complaint रहती है।
+                                        Regular use से दाँतों को बचाया जा सकता है।"
+                                    </p>
+                                    <div class="text-4xl text-brand-primary text-right mt-2 max-[450px]:text-3xl">❞
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 Recommendation -->
+                    <div
+                        class="bg-brand-light rounded-2xl p-6 shadow-xl border-l-4 border-brand-secondary max-[450px]:p-4">
+                        <div class="flex flex-col md:flex-col gap-6 max-[450px]:gap-4">
+                            <div class="flex flex-col md:flex-row justify-center gap-6 max-[450px]:gap-4">
+                                <!-- Doctor Image -->
+                                <div class="flex-shrink-0 text-center md:text-left">
+                                    <div
+                                        class="w-32 h-32 mx-auto md:mx-0 rounded-full overflow-hidden border-4 border-brand-primary shadow-lg max-[450px]:w-24 max-[450px]:h-24">
+                                        <img src="./image/doctor1.jpg" alt="Dr. Neha Kapoor"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                </div>
+                                <div class="mb-4 max-[450px]:mb-3">
+                                    <h3
+                                        class="text-2xl font-bold text-brand-primary font-tiro mb-1 max-[450px]:text-xl">
+                                        👩‍⚕️ Dr. Neha Kapoor
+                                    </h3>
+                                    <p class="text-brand-secondary font-semibold text-lg max-[450px]:text-base">
+                                        (BDS – Preventive Dental Expert)
+                                    </p>
+                                </div>
+
+                            </div>
+                            <!-- Doctor Info & Testimonial -->
+                            <div class="flex-1">
+                                <div
+                                    class="bg-white p-4 rounded-xl shadow-inner border border-brand-secondary/20 max-[450px]:p-3">
+                                    <div class="text-4xl text-brand-primary mb-2 max-[450px]:text-3xl">❝</div>
+                                    <p
+                                        class="text-gray-700 font-tiro leading-relaxed text-lg mb-4 max-[450px]:text-base max-[450px]:mb-3">
+                                        "Dental Repair Combo उन लोगों के लिए बहुत प्रभावी है जो हर महीने dentist के
+                                        चक्कर लगा-लगा कर थक चुके हैं।
+                                        इसका सबसे अच्छा part यह है कि यह जड़ से infection कम करता है, जिससे:
+                                    </p>
+                                    <div class="space-y-2 mb-4 max-[450px]:mb-3">
+                                        <p class="text-brand-primary font-semibold flex items-start gap-2">
+                                            <span class="text-green-600">✔</span>
+                                            <span class="font-tiro">सड़न रुकती है</span>
+                                        </p>
+                                        <p class="text-brand-primary font-semibold flex items-start gap-2">
+                                            <span class="text-green-600">✔</span>
+                                            <span class="font-tiro">मसूड़े heal होते हैं</span>
+                                        </p>
+                                        <p class="text-brand-primary font-semibold flex items-start gap-2">
+                                            <span class="text-green-600">✔</span>
+                                            <span class="font-tiro">दाँत के दर्द को करे ख़तम</span>
+                                        </p>
+                                    </div>
+                                    <p class="text-gray-700 font-tiro leading-relaxed text-lg max-[450px]:text-base">
+                                        मैं इसे खासकर उन patients को suggest करती हूँ जिनके दाँतों में धीरे-धीरे कीड़े
+                                        फैल रहे होते हैं और tooth removal तक की नौबत आ जाती है।
+                                        Natural होने की वजह से long-term use भी safe है।"
+                                    </p>
+                                    <div class="text-4xl text-brand-primary text-right mt-2 max-[450px]:text-3xl">❞
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Success Stories Section -->
+            <section
+                class="bg-gradient-to-br from-brand-muted to-brand-secondary px-4 py-10 max-[450px]:py-8 max-[450px]:px-3">
+                <div class="text-center mb-10 max-[450px]:mb-8">
+                    <h2 class="text-4xl font-bold text-white font-tiro mb-3 max-[450px]:text-3xl drop-shadow-lg">
+                        ✨ SUCCESS STORIES ✨
+                    </h2>
+                    <p class="text-white/90 text-lg font-tiro max-[450px]:text-base">
+                        हमारे खुश ग्राहकों की सच्ची कहानियाँ
+                    </p>
+                    <div class="w-24 h-1 bg-white mx-auto rounded-full mt-3"></div>
+                </div>
+
+                <div class="space-y-8 max-w-5xl mx-auto">
+                    <!-- Success Story 1 - Male -->
+                    <div class="relative">
+                        <div
+                            class="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white/20 backdrop-blur-sm">
+                            <div class="flex flex-col lg:flex-row">
+                                <!-- Customer Image -->
+                                <div class="lg:w-1/3 relative">
+                                    <div class="h-80 lg:h-full overflow-hidden">
+                                        <img src="./image/customer1.avif" alt="राजेश यादव"
+                                            class="w-full h-full object-cover">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-brand-primary/30 to-transparent">
+                                        </div>
+                                    </div>
+                                    <!-- Success Badge -->
+                                    <div
+                                        class="absolute top-4 right-4 bg-green-500 text-white px-3 py-2 rounded-full text-sm font-bold shadow-lg max-[450px]:px-2 max-[450px]:py-1 max-[450px]:text-xs">
+                                        ✅ SUCCESS
+                                    </div>
+                                </div>
+
+                                <!-- Story Content -->
+                                <div class="lg:w-2/3 p-8 max-[450px]:p-6">
+                                    <div class="flex items-center gap-3 mb-6 max-[450px]:mb-4">
+                                        <div
+                                            class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-3xl max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-2xl">
+                                            👨
+                                        </div>
+                                        <div>
+                                            <h3
+                                                class="text-2xl font-bold text-brand-primary font-tiro max-[450px]:text-xl">
+                                                राजेश यादव
+                                            </h3>
+                                            <p class="text-gray-600 font-semibold max-[450px]:text-sm">
+                                                42 वर्ष, जयपुर
+                                            </p>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div class="flex text-yellow-400 text-2xl max-[450px]:text-xl">
+                                                ⭐⭐⭐⭐⭐
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="bg-gray-50 p-6 rounded-2xl border-l-4 border-brand-primary relative max-[450px]:p-4">
+                                        <div
+                                            class="text-6xl text-brand-primary/20 absolute top-2 left-4 max-[450px]:text-4xl">
+                                            ❝
+                                        </div>
+                                        <p
+                                            class="text-gray-800 font-tiro leading-relaxed text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
+                                            "एक दाँत में इतना कीड़ा और सड़न था कि डॉक्टर ने कहा— दाँत निकालना पड़ेगा।
+                                            दर्द और खून रुक ही नहीं रहा था।
+                                        </p>
+                                        <p
+                                            class="text-green-700 font-bold font-tiro mt-4 text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
+                                            Dental Repair Combo शुरू किया और सिर्फ 10–12 दिनों में दर्द 70% कम।
+                                            2 महीने में सूजन और दर्द दोनों गायब।
+                                        </p>
+                                        <p
+                                            class="text-brand-primary font-bold font-tiro mt-4 text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
+                                            आज वही दाँत बिना निकाले बिल्कुल ठीक है।
+                                            सच में—मेरी मुस्कान बच गई।"
+                                        </p>
+                                        <div
+                                            class="text-6xl text-brand-primary/20 absolute bottom-2 right-4 max-[450px]:text-4xl">
+                                            ❞
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4 flex items-center gap-4 text-sm text-gray-600 max-[450px]:text-xs">
+                                        <span>📅 अगस्त 2024</span>
+                                        <span>⏱️ 2 महीने का इलाज</span>
+                                        <span>💚 100% संतुष्ट</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Success Story 2 - Female -->
+                    <div class="relative">
+                        <div
+                            class="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white/20 backdrop-blur-sm">
+                            <div class="flex flex-col lg:flex-row-reverse">
+                                <!-- Customer Image -->
+                                <div class="lg:w-1/3 relative">
+                                    <div class="h-80 lg:h-full overflow-hidden">
+                                        <img src="./image/customer2.avif" alt="पूजा शर्मा"
+                                            class="w-full h-full object-cover">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-brand-secondary/30 to-transparent">
+                                        </div>
+                                    </div>
+                                    <!-- Success Badge -->
+                                    <div
+                                        class="absolute top-4 left-4 bg-pink-500 text-white px-3 py-2 rounded-full text-sm font-bold shadow-lg max-[450px]:px-2 max-[450px]:py-1 max-[450px]:text-xs">
+                                        ✅ SUCCESS
+                                    </div>
+                                </div>
+
+                                <!-- Story Content -->
+                                <div class="lg:w-2/3 p-8 max-[450px]:p-6">
+                                    <div class="flex items-center gap-3 mb-6 max-[450px]:mb-4">
+                                        <div
+                                            class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center text-3xl max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-2xl">
+                                            👩
+                                        </div>
+                                        <div>
+                                            <h3
+                                                class="text-2xl font-bold text-brand-primary font-tiro max-[450px]:text-xl">
+                                                पूजा शर्मा
+                                            </h3>
+                                            <p class="text-gray-600 font-semibold max-[450px]:text-sm">
+                                                34 वर्ष, देहरादून
+                                            </p>
+                                        </div>
+                                        <div class="ml-auto">
+                                            <div class="flex text-yellow-400 text-2xl max-[450px]:text-xl">
+                                                ⭐⭐⭐⭐⭐
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="bg-gray-50 p-6 rounded-2xl border-l-4 border-brand-secondary relative max-[450px]:p-4">
+                                        <div
+                                            class="text-6xl text-brand-secondary/20 absolute top-2 left-4 max-[450px]:text-4xl">
+                                            ❝
+                                        </div>
+                                        <p
+                                            class="text-gray-800 font-tiro leading-relaxed text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
+                                            "ब्रश करते ही दाँत में खून, ठंडी चीज़ लगते ही तेज झनझनाहट—जीना मुश्किल हो
+                                            गया था।
+                                            Confidence almost खत्म हो चुका था।
+                                        </p>
+                                        <p
+                                            class="text-green-700 font-bold font-tiro mt-4 text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
+                                            Dental Repair Combo लेने के बाद पहले हफ्ते में ही मसूड़ों से bleeding और
+                                            झनझनाहट कम होने
+                                            लगी।
+                                            1–2 महीने में sensitivity खत्म और मसूड़े strong।
+                                        </p>
+                                        <p
+                                            class="text-brand-primary font-bold font-tiro mt-4 text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
+                                            अब न मसूड़ों से खून आता है, न शर्मिंदगी—फिर से खुलकर मुस्कुरा रही हूँ।"
+                                        </p>
+                                        <div
+                                            class="text-6xl text-brand-secondary/20 absolute bottom-2 right-4 max-[450px]:text-4xl">
+                                            ❞</div>
+                                    </div>
+
+                                    <div class="mt-4 flex items-center gap-4 text-sm text-gray-600 max-[450px]:text-xs">
+                                        <span>📅 सितंबर 2024</span>
+                                        <span>⏱️ 1-2 महीने का इलाज</span>
+                                        <span>💚 100% संतुष्ट</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center mt-10 max-[450px]:mt-8">
+                    <div
+                        class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto border border-white/20 max-[450px]:p-4">
+                        <h3 class="text-2xl font-bold text-white font-tiro mb-3 max-[450px]:text-xl">
+                            आप भी बन सकते हैं हमारी अगली SUCCESS STORY! 🌟
+                        </h3>
+                        <p class="text-white/90 font-tiro mb-4 max-[450px]:text-sm">
+                            अभी ऑर्डर करें और अपने दाँतों की समस्या को हमेशा के लिए अलविदा कहें
+                        </p>
+                        <button onclick="scrollToContact()"
+                            class="bg-white text-brand-primary font-bold px-8 py-3 rounded-full text-lg font-tiro hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl max-[450px]:px-6 max-[450px]:py-2 max-[450px]:text-base">
+                            🛒 अभी ऑर्डर करें
+                        </button>
+                    </div>
+                </div>
+            </section>
+
             <!-- Contact Section -->
             <section class="px-4 py-4 bg-brand-primary text-white max-[450px]:py-6 max-[450px]:px-3" id="contact">
                 <form id="contactForm">
                     <div class="mb-4 max-[450px]:mb-3">
                         <label for="name"
-                            class="block mb-2 text-xl text-white font-tiro font-semibold max-[450px]:text-lg max-[450px]:mb-1">आपका
+                            class="block mb-2 text-xl text-white font-eczar font-semibold max-[450px]:text-lg max-[450px]:mb-1">आपका
                             नाम:</label>
                         <input type="text" id="name" name="name" required placeholder="अपना नाम लिखें"
-                            class="w-full p-3 border-none rounded text-lg text-brand-primary placeholder-gray-500 font-tiro max-[450px]:p-2 max-[450px]:text-base bg-brand-light">
+                            class="w-full p-3 border-none rounded text-lg text-brand-primary placeholder-gray-500 font-eczar max-[450px]:p-2 max-[450px]:text-base bg-brand-light">
                     </div>
                     <div class="mb-4 max-[450px]:mb-3">
                         <label for="phone"
-                            class="block mb-2 text-xl text-white font-tiro font-semibold max-[450px]:text-lg max-[450px]:mb-1">फोन
+                            class="block mb-2 text-xl text-white font-eczar font-semibold max-[450px]:text-lg max-[450px]:mb-1">फोन
                             नंबर:</label>
                         <input type="tel" id="phone" name="phone" required placeholder="अपना फोन नंबर लिखें"
-                            class="w-full p-3 border-none rounded text-lg text-brand-primary placeholder-gray-500 font-tiro max-[450px]:p-2 max-[450px]:text-base bg-brand-light">
+                            class="w-full p-3 border-none rounded text-lg text-brand-primary placeholder-gray-500 font-eczar max-[450px]:p-2 max-[450px]:text-base bg-brand-light">
                     </div>
                     <button type="submit"
-                        class="bg-brand-secondary text-brand-accent font-bold border-none py-4 px-8 rounded text-2xl font-tiro font-bold cursor-pointer w-full mt-4 transition-all duration-300 hover:bg-opacity-90 max-[450px]:py-3 max-[450px]:px-4 max-[450px]:text-xl max-[450px]:mt-3 pulse-button glow-effect"
-                        onmouseenter="this.classList.add('shake')" onmouseleave="this.classList.remove('shake')" onclick="showThankYou()">
+                        class="bg-brand-secondary text-brand-accent font-bold border-none py-4 px-8 rounded text-2xl font-eczar font-bold cursor-pointer w-full mt-4 transition-all duration-300 hover:bg-opacity-90 max-[450px]:py-3 max-[450px]:px-4 max-[450px]:text-xl max-[450px]:mt-3 pulse-button glow-effect"
+                        onmouseenter="this.classList.add('shake')" onmouseleave="this.classList.remove('shake')"
+                        onclick="showThankYou()">
                         <span>✨</span>
                         अभी ऑर्डर करें
                         <span>✨</span>
                     </button>
                 </form>
             </section>
+
+            <!-- FAQ Section -->
+            <section class="bg-brand-light px-4 py-8 max-[450px]:py-6 max-[450px]:px-3">
+                <div class="text-center mb-8 max-[450px]:mb-6">
+                    <h2 class="text-3xl font-bold text-brand-primary font-tiro mb-2 max-[450px]:text-2xl">
+                        🤔 अक्सर पूछे जाने वाले सवाल
+                    </h2>
+                    <div class="w-16 h-1 bg-brand-secondary mx-auto rounded-full"></div>
+                </div>
+
+                <div class="space-y-4 max-w-3xl mx-auto">
+                    <!-- FAQ Item 1 -->
+                    <div
+                        class="faq-item bg-white rounded-xl shadow-lg border border-brand-secondary/20 overflow-hidden">
+                        <button
+                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-tiro hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
+                            <span>1️⃣ क्या यह Dental Repair Combo कीड़े और सड़न में मदद करता है?</span>
+                            <span class="faq-icon text-2xl max-[450px]:text-xl">+</span>
+                        </button>
+                        <div
+                            class="faq-answer hidden px-6 py-4 text-brand-primary font-tiro text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
+                            <p class="leading-relaxed">✅ हाँ, यह infection को रोककर सड़न की बढ़त कम करता है।</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div
+                        class="faq-item bg-white rounded-xl shadow-lg border border-brand-secondary/20 overflow-hidden">
+                        <button
+                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-tiro hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
+                            <span>2️⃣ क्या मसूड़ों से खून और सूजन में राहत मिलती है?</span>
+                            <span class="faq-icon text-2xl max-[450px]:text-xl">+</span>
+                        </button>
+                        <div
+                            class="faq-answer hidden px-6 py-4 text-brand-primary font-tiro text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
+                            <p class="leading-relaxed">✅ हाँ, Dental Drops मसूड़ों को soothe करके bleeding कम करती हैं।
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div
+                        class="faq-item bg-white rounded-xl shadow-lg border border-brand-secondary/20 overflow-hidden">
+                        <button
+                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-tiro hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
+                            <span>3️⃣ क्या यह बच्चों के लिए सुरक्षित है?</span>
+                            <span class="faq-icon text-2xl max-[450px]:text-xl">+</span>
+                        </button>
+                        <div
+                            class="faq-answer hidden px-6 py-4 text-brand-primary font-tiro text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
+                            <p class="leading-relaxed">✅ 10 साल से ऊपर बच्चों के लिए सुरक्षित है (adult dose से कम
+                                मात्रा
+                                में)।</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div
+                        class="faq-item bg-white rounded-xl shadow-lg border border-brand-secondary/20 overflow-hidden">
+                        <button
+                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-tiro hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
+                            <span>4️⃣ कितने समय तक इसका इस्तेमाल करना चाहिए?</span>
+                            <span class="faq-icon text-2xl max-[450px]:text-xl">+</span>
+                        </button>
+                        <div
+                            class="faq-answer hidden px-6 py-4 text-brand-primary font-tiro text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
+                            <p class="leading-relaxed">✅ कम से कम 30–45 दिन regular use से अच्छे results मिलते हैं।</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div
+                        class="faq-item bg-white rounded-xl shadow-lg border border-brand-secondary/20 overflow-hidden">
+                        <button
+                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-tiro hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
+                            <span>5️⃣ क्या इसके कोई side effects हैं?</span>
+                            <span class="faq-icon text-2xl max-[450px]:text-xl">+</span>
+                        </button>
+                        <div
+                            class="faq-answer hidden px-6 py-4 text-brand-primary font-tiro text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
+                            <p class="leading-relaxed">✅ यह 100% Ayurvedic है, इसलिए सामान्यतः कोई side effects नहीं
+                                होते।
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div
+                        class="faq-item bg-white rounded-xl shadow-lg border border-brand-secondary/20 overflow-hidden">
+                        <button
+                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-tiro hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
+                            <span>6️⃣ क्या इससे sensitivity में भी फर्क आता है?</span>
+                            <span class="faq-icon text-2xl max-[450px]:text-xl">+</span>
+                        </button>
+                        <div
+                            class="faq-answer hidden px-6 py-4 text-brand-primary font-tiro text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
+                            <p class="leading-relaxed">✅ हाँ, hot–cold sensitivity में राहत मिलती है।</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </main>
 
-        <footer class="bg-brand-primary text-white py-4 px-4 text-center max-[450px]:py-4 max-[450px]:px-3 pb-28 max-[450px]:pb-32">
-            <div class="text-sm text-white mt-4 font-tiro max-[450px]:text-xs max-[450px]:mt-2">
-                <p><strong class="font-tiro font-semibold">⚠️ Disclaimer :-</strong>This product is not intended to
+        <footer
+            class="bg-brand-primary text-white py-4 px-4 text-center max-[450px]:py-4 max-[450px]:px-3 pb-28 max-[450px]:pb-32">
+            <div class="text-sm text-white mt-4 font-eczar max-[450px]:text-xs max-[450px]:mt-2">
+                <p><strong class="font-eczar font-semibold">⚠️ Disclaimer :-</strong>This product is not intended to
                     diagnose, treat, cure, or prevent any disease. Results may vary from person to person. Always
                     consult with a qualified healthcare professional before starting any new supplement.</p>
             </div>
         </footer>
+
+        <!-- Scrolling Text Banner -->
+        <div
+            class="fixed bottom-20 left-1/2 transform -translate-x-1/2 z-50  shadow-2xl w-[450px] bg-brand-secondary  text-white py-2 overflow-hidden">
+            <div class="marquee-content animate-scroll whitespace-nowrap text-lg font-bold font-eczar">
+                राहत वहीं मिलेगी… जहाँ सही Treatment हो। नीचे क्लिक करें और अपने दाँतों की सुरक्षा आज ही शुरू करें। *
+                LIMITED STOCK * राहत वहीं मिलेगी… जहाँ सही Treatment हो। नीचे क्लिक करें और अपने दाँतों की सुरक्षा आज ही
+                शुरू करें। * LIMITED STOCK * राहत वहीं मिलेगी… जहाँ सही Treatment हो। नीचे क्लिक करें और अपने दाँतों की
+                सुरक्षा आज ही शुरू करें। * LIMITED STOCK * राहत वहीं मिलेगी… जहाँ सही Treatment हो। नीचे क्लिक करें और
+                अपने दाँतों की सुरक्षा आज ही शुरू करें। * LIMITED STOCK *
+            </div>
+        </div>
+
         <!-- Thank You Modal -->
-        <div id="thankYouModal"
-            class="hidden fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center" style="background-color:rgba(255,255,255,0.2); border-radius: 15px; padding: 8px 16px; backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.3); box-shadow: 0 8px 25px rgba(0, 0, 0, 0);">
+        <div id="thankYouModal" class="hidden fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center"
+            style="background-color:rgba(255,255,255,0.2); border-radius: 15px; padding: 8px 16px; backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.3); box-shadow: 0 8px 25px rgba(0, 0, 0, 0);">
             <div
                 class="bg-brand-light p-8 rounded-lg text-center max-w-sm mx-4 max-[450px]:p-6 max-[450px]:max-w-xs border-2 border-brand-secondary">
-                <h2 class="text-brand-primary mb-4 text-2xl font-tiro font-bold max-[450px]:text-xl max-[450px]:mb-3">
+                <h2 class="text-brand-primary mb-4 text-2xl font-eczar font-bold max-[450px]:text-xl max-[450px]:mb-3">
                     धन्यवाद!</h2>
-                <p class="text-xl mb-6 font-tiro font-medium max-[450px]:text-lg max-[450px]:mb-4 text-gray-700">
+                <p class="text-xl mb-6 font-eczar font-medium max-[450px]:text-lg max-[450px]:mb-4 text-gray-700">
                     हमने
                     आपकी
                     जानकारी
@@ -363,52 +1564,45 @@
 
         <!-- Fixed CTA Form at Bottom -->
         <div id="fixedCTA"
-            class="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-brand-primary shadow-2xl w-[450px] max-w-full border-t-4 border-brand-secondary">
-            <div class="px-2 py-2 w-full max-[450px]:px-4 max-[450px]:py-2">
-                <!-- Countdown Timer Heading -->
-                <div class="text-center mb-2">
-                    <!-- <div class="text-white text-base font-tiro font-bold mb-1">
-                        ⏰ आज का ऑफर समाप्त होने में:
-                    </div> -->
-                    <div id="countdown" class="text-white text-2xl max-[450px]:text-3xl font-extrabold font-eczar">
-                       00:00:00
-                    </div>
-                </div>
-
-                <!-- Main Content: Left Points + Right Offer/Button -->
-                <div class="flex items-center gap-6">
-                    <!-- Left Side: Three Promotional Points with Bullets -->
-                    <div class="flex-1">
-                        <ul class="text-white text-lg font-eczar font-bold space-y-1">
-                            <li class="flex items-center gap-2">
-                                <span class="text-brand-secondary text-lg">•</span>
-                                <span>🔥 Today Offer</span>
+            class="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-brand-primary shadow-2xl w-[450px] border-t-4 border-brand-secondary">
+            <div class="px-4 py-2 w-full max-[450px]:px-6 max-w-screen-xl mx-auto">
+                <!-- Main Content: Horizontal Layout -->
+                <div class="grid grid-cols-3 gap-3 max-[450px]:gap-5">
+                    <!-- Left Side: Promotional Points -->
+                    <div class="flex-1  gap-2 min-w-0">
+                        <ul class="text-white text-sm font-eczar font-bold space-y-2 max-[450px]:text-sm">
+                            <li class="flex items-center gap-1.5">
+                                <span class="truncate">🔥 Today Offer</span>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-brand-secondary text-lg">•</span>
-                                <span>💰 COD Available</span>
+                            <li class="flex items-center gap-1.5">
+                                <span class="truncate">📊 Diet Chart</span>
                             </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-brand-secondary text-lg">•</span>
-                                <span>🚚 Free Delivery</span>
+                            <li class="flex items-center gap-1.5">
+                                <span class="truncate">💰 COD Available</span>
                             </li>
                         </ul>
                     </div>
 
-                    <!-- Right Side: 10% OFF + Button -->
-                    <div class="flex flex-col items-center gap-2">
-                        <!-- Bouncing 10% OFF Text -->
-                        <div class="inline-block animate-bounce">
-                            <span class="text-3xl  font-extrabold text-white bg-red-800 px-4 py-1 rounded-full shadow-lg font-eczar">
-                                🎉 10% OFF
-                            </span>
+                    <!-- Center: Offer Badge -->
+                    <div
+                        class="animate-bounce text-lg font-bold text-white bg-brand-secondary px-3 shadow-lg text-center flex items-center font-eczar whitespace-nowrap max-[450px]:text-lg max-[450px]:px-2">
+                        🎉 10% OFF
+                    </div>
+
+                    <!-- Right Side: Timer & Button -->
+                    <div class="flex items-center flex-col gap-3 max-[450px]:gap-2">
+                        <!-- Countdown Timer -->
+                        <div class="text-center">
+                            <div id="countdown"
+                                class="text-white text-lg max-[450px]:text-lg font-extrabold font-eczar whitespace-nowrap">
+                                00:00:00
+                            </div>
                         </div>
-                        
                         <!-- Order Button -->
                         <button id="ctaButton" onclick="scrollToContact()"
-                            class="cta-button bg-brand-secondary text-red-700 px-6 py-2 rounded-lg font-eczar font-bold text-xl transition-all duration-300 shadow-lg hover:scale-105 pulse-animation glow-effect whitespace-nowrap"
+                            class="cta-button bg-brand-secondary text-white px-3 py-2 rounded-lg font-eczar font-bold text-sm transition-all duration-300 shadow-lg hover:scale-105 pulse-animation glow-effect whitespace-nowrap max-[450px]:text-lg max-[450px]:px-2 max-[450px]:py-1.5"
                             onmouseenter="this.classList.add('shake')" onmouseleave="this.classList.remove('shake')">
-                            🛒 अभी ऑर्डर करें
+                            🛒 Order Now
                         </button>
                     </div>
                 </div>
@@ -420,13 +1614,13 @@
             // Process and fill form data
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
-            
+
             // Validate form data
             if (!name || !phone) {
                 alert('कृपया सभी फील्ड भरें!');
                 return false;
             }
-            
+
             // Process the data (you can modify this part as needed)
             const formData = {
                 customerName: name,
@@ -434,11 +1628,11 @@
                 timestamp: new Date().toLocaleString('hi-IN'),
                 product: 'Mirgi Mukti'
             };
-            
+
             // Fill/store the processed data (example: console log or local storage)
             console.log('Form Data Processed:', formData);
             localStorage.setItem('customerOrder', JSON.stringify(formData));
-            
+
             // Show thank you modal if it exists, otherwise show alert
             const modal = document.getElementById('thankYouModal');
             if (modal) {
@@ -452,10 +1646,10 @@
                 alert(`धन्यवाद ${name}! आपका ऑर्डर सफलतापूर्वक सबमिट हो गया है। हमारी टीम जल्द ही ${phone} पर आपसे संपर्क करेगी।`);
                 document.getElementById('contactForm').reset();
             }
-            
+
             return true;
         }
-        
+
         function closeModal() {
             const modal = document.getElementById('thankYouModal');
             if (modal) {
@@ -463,7 +1657,7 @@
             }
             document.getElementById('contactForm').reset();
         }
-        
+
         function scrollToContact() {
             document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
@@ -476,12 +1670,12 @@
             tomorrow.setHours(0, 0, 0, 0); // Set to midnight
 
             const timeRemaining = tomorrow - now;
-            
+
             const hours = Math.floor(timeRemaining / (1000 * 60 * 60));
             const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-            const formattedTime = 
+            const formattedTime =
                 String(hours).padStart(2, '0') + ':' +
                 String(minutes).padStart(2, '0') + ':' +
                 String(seconds).padStart(2, '0');
@@ -493,9 +1687,55 @@
         }
 
         // Start countdown on page load
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             updateCountdown();
             setInterval(updateCountdown, 1000); // Update every second
+
+            // FAQ Accordion Functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function () {
+                    const faqItem = this.parentElement;
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const icon = this.querySelector('.faq-icon');
+
+                    // Close all other open FAQ items
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== question) {
+                            const otherItem = otherQuestion.parentElement;
+                            const otherAnswer = otherItem.querySelector('.faq-answer');
+                            const otherIcon = otherQuestion.querySelector('.faq-icon');
+
+                            otherAnswer.classList.remove('show');
+                            setTimeout(() => {
+                                otherAnswer.classList.add('hidden');
+                            }, 400);
+                            otherIcon.textContent = '+';
+                            otherItem.classList.remove('faq-active');
+                        }
+                    });
+
+                    // Toggle current FAQ item
+                    if (answer.classList.contains('show')) {
+                        // Close current
+                        answer.classList.remove('show');
+                        setTimeout(() => {
+                            answer.classList.add('hidden');
+                        }, 400);
+                        icon.textContent = '+';
+                        faqItem.classList.remove('faq-active');
+                    } else {
+                        // Open current
+                        answer.classList.remove('hidden');
+                        setTimeout(() => {
+                            answer.classList.add('show');
+                        }, 10);
+                        icon.textContent = '−';
+                        faqItem.classList.add('faq-active');
+                    }
+                });
+            });
         });
     </script>
 
