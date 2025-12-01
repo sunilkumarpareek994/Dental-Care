@@ -78,24 +78,7 @@
         }
 
         .font-eczar {
-            font-family: 'eczar', serif;
-        }
-
-        .font-eczar {
-            font-family: 'Eczar', sans-serif;
-        }
-
-        .font-eczar {
-            font-family: 'eczar Devanagari Hindi', serif;
-        }
-
-        .font-halant {
-            font-family: 'Halant', serif;
-        }
-
-        .main-container {
-            max-width: 1200px;
-            margin: 0 auto;
+            font-family: 'Eczar', serif;
         }
     </style>
     <style>
@@ -117,12 +100,8 @@
         @media (max-width: 450px) {
             .main-container {
                 max-width: 100%;
-            }
-
-            .main-container {
                 margin-bottom: 20px;
             }
-
         }
 
         /* Scrolling Animation */
@@ -173,6 +152,7 @@
         .faq-item.faq-active .faq-icon {
             transform: rotate(180deg);
         }
+
     </style>
 </head>
 
@@ -185,22 +165,21 @@
                 <div class="w-full"
                     style="background-color:rgba(255,255,255,0.2); border-radius: 15px; padding: 8px 16px; backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.3); box-shadow: 0 8px 25px rgba(0,0,0,0.15);">
                     <div
-                        class="brand-text-enhanced font-eczar text-2xl font-bold max-[450px]:text-2xl hover:scale-105 transition-transform duration-300 cursor-default text-white drop-shadow-lg text-center leading-tight">
+                        class="font-eczar text-xl font-bold max-[450px]:text-2xl hover:scale-105 transition-transform duration-300 cursor-default text-white drop-shadow-lg text-center leading-tight">
                         <div class="flex items-center justify-center gap-2 max-[450px]:gap-1 flex-wrap">
-                            <!-- <span
-                                class="inline-block text-brand-secondary animate-pulse text-1xl max-[450px]:text-xl">🌿</span> -->
-                            <span class="whitespace-nowrap text-brand-White">Dental</span>
-                            <span class="whitespace-nowrap text-brand-white">Care</span>
-                            <!-- <span class="inline-block animate-pulse text-1xl max-[450px]:text-xl">✨</span> -->
+                            <span
+                                class="inline-block text-brand-secondary animate-pulse text-1xl max-[450px]:text-xl">🦷</span>
+                            <span class="whitespace-nowrap text-white">Dental</span>
+                            <span class="whitespace-nowrap text-white">Care</span>
+                            <span class="inline-block animate-pulse text-xl max-[450px]:text-xl">🪥</span>
                         </div>
                     </div>
                 </div>
             </div>
             <button
-                class="bg-brand-secondary text-white font-bold border-none px-6 py-3 rounded-lg font-bold text-xl cursor-pointer transition-all duration-300 hover:bg-opacity-80 max-[450px]:text-xl max-[450px]:px-4 max-[450px]:py-3 btn-bounce pulse-button glow-effect flex-shrink-0"
-                onclick="scrollToContact()" onmouseenter="this.classList.add('shake')"
-                onmouseleave="this.classList.remove('shake')">
-                <span class="relative z-10">🛒 ऑर्डर करें
+                class="bg-brand-secondary text-white font-bold border-none px-6 py-3 rounded-lg text-xl cursor-pointer transition-all duration-300 hover:bg-opacity-80 max-[450px]:text-xl max-[450px]:px-4 max-[450px]:py-3 flex-shrink-0"
+                onclick="scrollToContact()">
+                <span class="relative z-10 "> 🛒 ऑर्डर करें
                 </span>
             </button>
         </header>
@@ -209,7 +188,7 @@
 
             <!-- Hero Section -->
             <section class="px-4 py-6  max-[450px]:px-4 max-[450px]:py-4 overflow-hidden ">
-                <img src="./image/Hero.png" alt="Hero Image" class="w-full h-auto shadow-2xl ">
+                <img src="./image/Hero.avif" alt="Hero Image" class="w-full h-auto shadow-2xl ">
                 <div class="w-full flex flex-col justify-center ">
                     <h1
                         class="text-3xl font-bold text-white text-left mt-6 max-[450px]:text-3xl max-[450px]:mt-4 font-eczar leading-tight">
@@ -239,7 +218,7 @@
                     </div>
 
                     <!-- Benefits Grid with Vector Images -->
-                    <div class="space-y-12 max-[450px]:space-y-8">
+                    <div class="space-y-12  max-[450px]:space-y-8">
 
                         <!-- Benefit 1 -->
                         <div
@@ -258,7 +237,7 @@
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/solve11.png" alt="मिर्गी का बारंबार होना कम करने में मदद"
+                                    <img src="./image/solve11.avif" alt="मिर्गी का बारंबार होना कम करने में मदद"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
@@ -280,7 +259,7 @@
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/solve12.png" alt="मस्तिष्क असंतुलन को शांत करना"
+                                    <img src="./image/solve12.avif" alt="मस्तिष्क असंतुलन को शांत करना"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
@@ -304,7 +283,7 @@
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/solve13.png" alt="बेहोशी से गिरने के अवसरों को कम करना"
+                                    <img src="./image/solve13.avif" alt="बेहोशी से गिरने के अवसरों को कम करना"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
@@ -327,7 +306,7 @@
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/solve14.png" alt="दौरे आने की तीव्रता कम करना"
+                                    <img src="./image/solve14.avif" alt="दौरे आने की तीव्रता कम करना"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
@@ -350,7 +329,7 @@
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/solve15.png" alt="कांपना + घबराहट + चिंता में राहत"
+                                    <img src="./image/solve15.avif" alt="कांपना + घबराहट + चिंता में राहत"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
                             </div>
@@ -373,7 +352,7 @@
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/solve16.png"
+                                    <img src="./image/solve16.avif"
                                         alt="Stroke के बाद होने वाले छोटे दौरा में आयुर्वेदिक सहायता"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
@@ -397,9 +376,35 @@
                                 </div>
                                 <!-- Image Content -->
                                 <div class="p-4 max-[450px]:p-3">
-                                    <img src="./image/solve17.png" alt="दीर्घकालिक तंत्रिका सुरक्षा"
+                                    <img src="./image/solve17.avif" alt="दीर्घकालिक तंत्रिका सुरक्षा"
                                         class="w-full h-auto max-w-sm mx-auto transform group-hover:scale-105 transition-transform duration-500">
                                 </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Call to Action -->
+                        <div
+                            class="mt-12 bg-brand-primary  rounded-3xl p-8 text-center shadow-2xl max-[450px]:mt-8 max-[450px]:p-6">
+                            <h3
+                                class="text-3xl font-bold text-white font-eczar mb-4 max-[450px]:text-2xl max-[450px]:mb-3">
+                                🎯 ये सब संकेत हैं कि दाँत और मसूड़े अंदर से कमजोर हो चुके हैं।
+                            </h3>
+                            <h4
+                                class=" text-2xl font-bold text-white font-eczar mb-4 max-[450px]:text-xl max-[450px]:mb-3">
+                                Dentist कहते हैं—
+                            </h4>
+                            <p
+                                class="text-white font-eczar text-xl leading-relaxed mb-6 max-[450px]:text-lg max-[450px]:mb-4">
+                                एक दाँत की cavity धीरे-धीरे बाकी दाँतों को भी खराब कर देती है।<br>
+                                <span class="font-bold text-brand-light">Regular toothpaste disease को रोक नहीं पाता,
+                                    सिर्फ ऊपर-ऊपर सफाई करता है।</span>
+                            </p>
+                            <div class="flex justify-center">
+                                <button onclick="scrollToContact()"
+                                    class="bg-white text-brand-primary px-8 py-4 rounded-2xl font-bold text-xl font-eczar hover:scale-105 transition-all duration-300 shadow-lg max-[450px]:px-6 max-[450px]:py-3 max-[450px]:text-lg">
+                                    अभी ऑर्डर करें 🛒
+                                </button>
                             </div>
                         </div>
 
@@ -423,7 +428,7 @@
 
                         <!-- Image - No gap between header and image -->
                         <div class="w-full">
-                            <img src="./image/men_pain.png" alt="Man suffering from dental pain"
+                            <img src="./image/men_pain.avif" alt="Man suffering from dental pain"
                                 class="w-full h-80 object-cover max-[450px]:h-64">
                         </div>
 
@@ -501,6 +506,390 @@
                 </div>
             </section>
 
+            <!-- Product Introduction Section -->
+            <section
+                class="bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-primary px-4 py-6 max-[450px]:py-4 max-[450px]:px-3">
+                <!-- Main Headline -->
+                        <div class="text-center mb-8 max-[450px]:mb-6">
+                            <div
+                                class="w-40 h-3 bg-gradient-to-r from-brand-primary to-brand-secondary  mx-auto max-[450px]:w-32 max-[450px]:h-2 mb-6">
+                            </div>
+                            <h3 class="text-3xl font-extrabold  text-white font-eczar max-[450px]:text-3xl">
+                                पेश है आपका Ayurvedic समाधान
+                            </h3>
+                        </div>
+
+                        <!-- Product Poster -->
+                        <div class="text-center mb-10 max-[450px]:mb-8">
+                            <div class="relative w-full h-full inline-block">
+                                <img src="./image/ProductIntro.avif" alt="Ayurvedic Dental Repair Combo"
+                                    class="w-full h-auto mx-auto shadow-2xl  hover:scale-105 transition-transform duration-500">
+                                <div
+                                    class="absolute -top-4 -right-4 bg-brand-muted text-white px-4 py-2 rounded-full font-bold text-lg animate-bounce max-[450px]:text-base max-[450px]:px-3 max-[450px]:py-1 max-[450px]:-top-3 max-[450px]:-right-3">
+                                    ⭐ NEW
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Name & Subheading -->
+                        <div class="text-center mb-4 max-[450px]:mb-3">
+                            <div
+                                class="bg-brand-secondary rounded-3xl p-6 text-white shadow-2xl max-[450px]:p-4 max-[450px]:rounded-2xl">
+                                <h4 class="text-4xl font-black font-eczar mb-4 max-[450px]:text-3xl max-[450px]:mb-3">
+                                    ⭐ Ayurvedic Dental Repair Combo
+                                </h4>
+                                <p class="text-2xl font-bold font-eczar max-[450px]:text-xl">
+                                    (Dental Drops + Oral Detox Capsules)
+                                </p>
+                            </div>
+                            <p
+                                class="text-2xl font-bold text-white font-eczar mt-6 max-[450px]:text-2xl max-[450px]:mt-4">
+                                एक ऐसा Ayurvedic फ़ॉर्मूला जो—
+                            </p>
+                        </div>
+                <div class="max-w-6xl mx-auto">
+                    <div
+                        class="bg-white rounded-[3rem]  shadow-[0_50px_120px_rgba(33,86,132,0.25)] border-8 border-white p-5 max-[450px]:p-8 max-[450px]:rounded-3xl max-[450px]:border-6 backdrop-blur-sm bg-white/98">
+
+                        <!-- Product Benefits List -->
+                        <div
+                            class="shadow-xl max-[450px]:rounded-2xl">
+                            <ul class="space-y-4 max-[450px]:space-y-3">
+
+                                <!-- Benefit 1: Pain Relief -->
+                                <li
+                                    class="flex items-center gap-4 bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-green-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center text-xl font-bold max-[450px]:w-10 max-[450px]:h-10 max-[450px]:text-lg">
+                                            🦷
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-gray-800 font-eczar text-xl font-bold leading-relaxed max-[450px]:text-lg">
+                                        दाँतों में तेज दर्द को शांत करता है
+                                    </p>
+                                </li>
+
+                                <!-- Benefit 2: Prevents Decay -->
+                                <li
+                                    class="flex items-center gap-4 bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-blue-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl font-bold max-[450px]:w-10 max-[450px]:h-10 max-[450px]:text-lg">
+                                            🦷
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-gray-800 font-eczar text-xl font-bold leading-relaxed max-[450px]:text-lg">
+                                        दाँतों की सड़न रोकता है
+                                    </p>
+                                </li>
+
+                                <!-- Benefit 3: Reduces Inflammation -->
+                                <li
+                                    class="flex items-center gap-4 bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-purple-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="w-12 h-12 bg-purple-500 text-white rounded-full flex items-center justify-center text-xl font-bold max-[450px]:w-10 max-[450px]:h-10 max-[450px]:text-lg">
+                                            🦷
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-gray-800 font-eczar text-xl font-bold leading-relaxed max-[450px]:text-lg">
+                                        मसूड़ों की सूजन शांत करता है
+                                    </p>
+                                </li>
+
+                                <!-- Benefit 4: Prevents Cavities -->
+                                <li
+                                    class="flex items-center gap-4 bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-orange-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="w-12 h-12 bg-orange-500 text-white rounded-full flex items-center justify-center text-xl font-bold max-[450px]:w-10 max-[450px]:h-10 max-[450px]:text-lg">
+                                            🦷
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-gray-800 font-eczar text-xl font-bold leading-relaxed max-[450px]:text-lg">
+                                        दाँत में कीड़ों को बढ़ने से रोकता है
+                                    </p>
+                                </li>
+
+                                <!-- Benefit 5: Strengthens Teeth -->
+                                <li
+                                    class="flex items-center gap-4 bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-red-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="w-12 h-12 bg-red-500 text-white rounded-full flex items-center justify-center text-xl font-bold max-[450px]:w-10 max-[450px]:h-10 max-[450px]:text-lg">
+                                            🦷
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-gray-800 font-eczar text-xl font-bold leading-relaxed max-[450px]:text-lg">
+                                        दाँत मजबूत बनाता है
+                                    </p>
+                                </li>
+
+                                <!-- Benefit 6: Clears Infection -->
+                                <li
+                                    class="flex items-center gap-4 bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-brand-muted max-[450px]:p-3 max-[450px]:gap-3">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="w-12 h-12 bg-brand-muted text-white rounded-full flex items-center justify-center text-xl font-bold max-[450px]:w-10 max-[450px]:h-10 max-[450px]:text-lg">
+                                            🦷
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-gray-800 font-eczar text-xl font-bold leading-relaxed max-[450px]:text-lg">
+                                        दाँत के infection को अंदर से साफ करता है
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Call to Action -->
+                        <div
+                            class="mt-10 bg-brand-primary rounded-3xl p-8 text-center shadow-2xl max-[450px]:mt-8 max-[450px]:p-6">
+                            <h5
+                                class="text-3xl font-bold text-white font-eczar mb-4 max-[450px]:text-2xl max-[450px]:mb-3">
+                                🌟 प्राकृतिक शक्ति से भरपूर समाधान!
+                            </h5>
+                            <p
+                                class="text-white font-eczar text-xl leading-relaxed mb-6 max-[450px]:text-lg max-[450px]:mb-4">
+                                अब मिलेगी आपको सभी दाँतों की समस्याओं से मुक्ति<br>
+                                <span class="font-bold text-brand-light">100% आयुर्वेदिक और सुरक्षित तरीके से!</span>
+                            </p>
+                            <div class="flex justify-center">
+                                <button onclick="scrollToContact()"
+                                    class="bg-white text-brand-primary px-8 py-4 rounded-2xl font-bold text-xl font-eczar hover:scale-105 transition-all duration-300 shadow-lg max-[450px]:px-6 max-[450px]:py-3 max-[450px]:text-lg">
+                                    अभी ऑर्डर करें 🛒
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How It Works Section -->
+            <section class="bg-gradient-to-br from-brand-secondary via-brand-primary to-brand-secondary px-4 py-12 max-[450px]:py-10 max-[450px]:px-3">
+                <div class="max-w-6xl mx-auto">
+                    
+                    <!-- Section Header -->
+                    <div class="text-center mb-12 max-[450px]:mb-10">
+                        <h2 class="text-5xl font-black text-white font-eczar mb-6 max-[450px]:text-4xl max-[450px]:mb-4 leading-tight">
+                            HOW IT WORKS
+                        </h2>
+                        <div class="w-40 h-3 bg-gradient-to-r from-brand-light to-white rounded-full mx-auto mb-6 max-[450px]:w-32 max-[450px]:h-2"></div>
+                        <p class="text-2xl font-bold text-brand-light font-eczar max-[450px]:text-xl">
+                            ये आपके Dental Problems को कैसे खत्म करता है?
+                        </p>
+                    </div>
+
+                    <!-- Product 1: Dental Drops -->
+                    <div class="bg-white rounded-[3rem] p-10 shadow-[0_30px_100px_rgba(0,0,0,0.2)] border-8 border-white/20 backdrop-blur-sm bg-white/98 mb-12 max-[450px]:p-8 max-[450px]:rounded-3xl max-[450px]:mb-8">
+                        <div class="grid grid-cols-1 lg:grid-cols-1 gap-8 items-center max-[450px]:gap-6">
+                            
+                            <!-- Product Image -->
+                            <div class="order-2 lg:order-1">
+                                <div class="relative">
+                                    <img src="./image/product4.avif" alt="Dental Drops" 
+                                         class="w-full h-auto max-w-md mx-auto rounded-3xl shadow-2xl border-8 border-brand-primary/20 hover:scale-105 transition-transform duration-500 max-[450px]:max-w-sm max-[450px]:rounded-2xl">
+                                    <div class="absolute -top-4 -right-4 bg-blue-500 text-white px-4 py-2 rounded-full font-bold text-lg animate-bounce max-[450px]:text-base max-[450px]:px-3 max-[450px]:py-1 max-[450px]:-top-3 max-[450px]:-right-3">
+                                        💧 1
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="order-1 lg:order-2">
+                                <div class="mb-8 max-[450px]:mb-6">
+                                    <div class="flex items-center gap-4 mb-6 max-[450px]:gap-3 max-[450px]:mb-4">
+                                        <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-3xl shadow-lg max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-2xl">
+                                            💧
+                                        </div>
+                                        <h3 class="text-4xl font-bold text-brand-primary font-eczar max-[450px]:text-3xl">
+                                            1. Dental Drops
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <ul class="space-y-4 max-[450px]:space-y-3">
+                                    <li class="flex items-center gap-4 bg-blue-50 rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-blue-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold max-[450px]:w-6 max-[450px]:h-6 max-[450px]:text-xs">
+                                                🦷
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-800 font-eczar text-lg font-semibold leading-relaxed max-[450px]:text-base">
+                                            दाँत में कीड़े और सड़न वाली जगह पर सीधा असर
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-center gap-4 bg-green-50 rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-green-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold max-[450px]:w-6 max-[450px]:h-6 max-[450px]:text-xs">
+                                                🦷
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-800 font-eczar text-lg font-semibold leading-relaxed max-[450px]:text-base">
+                                            Infection कम करता है
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-center gap-4 bg-red-50 rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-red-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold max-[450px]:w-6 max-[450px]:h-6 max-[450px]:text-xs">
+                                                🦷
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-800 font-eczar text-lg font-semibold leading-relaxed max-[450px]:text-base">
+                                            मसूड़ों की सूजन और खून बंद
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-center gap-4 bg-purple-50 rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-purple-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold max-[450px]:w-6 max-[450px]:h-6 max-[450px]:text-xs">
+                                                🦷
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-800 font-eczar text-lg font-semibold leading-relaxed max-[450px]:text-base">
+                                            दाँत दर्द में राहत
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-center gap-4 bg-orange-50 rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-orange-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold max-[450px]:w-6 max-[450px]:h-6 max-[450px]:text-xs">
+                                                🦷
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-800 font-eczar text-lg font-semibold leading-relaxed max-[450px]:text-base">
+                                            Hot–Cold Sensitivity कम
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-center gap-4 bg-teal-50 rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-teal-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="w-8 h-8 bg-teal-500 text-white rounded-full flex items-center justify-center text-sm font-bold max-[450px]:w-6 max-[450px]:h-6 max-[450px]:text-xs">
+                                                🦷
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-800 font-eczar text-lg font-semibold leading-relaxed max-[450px]:text-base">
+                                            सड़न फैलना रुकता है
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2: Oral Detox Capsules -->
+                    <div class="bg-white rounded-[3rem] p-10 shadow-[0_30px_100px_rgba(0,0,0,0.2)] border-8 border-white/20 backdrop-blur-sm bg-white/98 mb-12 max-[450px]:p-8 max-[450px]:rounded-3xl max-[450px]:mb-8">
+                        <div class="grid grid-cols-1 lg:grid-cols-1 gap-8 items-center max-[450px]:gap-6">
+                            
+                            <!-- Content -->
+                            <div class="order-1">
+                                <div class="mb-8 max-[450px]:mb-6">
+                                    <div class="flex items-center gap-4 mb-6 max-[450px]:gap-3 max-[450px]:mb-4">
+                                        <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-2xl shadow-lg max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-xl">
+                                            💊
+                                        </div>
+                                        <h3 class="text-4xl font-bold text-brand-primary font-eczar max-[450px]:text-3xl">
+                                            2. Oral Detox Capsules
+                                        </h3>
+                                    </div>
+                                </div>
+
+                                <ul class="space-y-4 max-[450px]:space-y-3">
+                                    <li class="flex items-center gap-4 bg-green-50 rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-green-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold max-[450px]:w-6 max-[450px]:h-6 max-[450px]:text-xs">
+                                                🦷
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-800 font-eczar text-lg font-semibold leading-relaxed max-[450px]:text-base">
+                                            शरीर की अंदरूनी गंदगी और toxins साफ
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-center gap-4 bg-blue-50 rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-blue-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold max-[450px]:w-6 max-[450px]:h-6 max-[450px]:text-xs">
+                                                🦷
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-800 font-eczar text-lg font-semibold leading-relaxed max-[450px]:text-base">
+                                            दाँत और मसूड़े मजबूत
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-center gap-4 bg-red-50 rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-red-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="w-8 h-8 bg-red-500 text-white rounded-full flex items-center justify-center text-sm font-bold max-[450px]:w-6 max-[450px]:h-6 max-[450px]:text-xs">
+                                                🦷
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-800 font-eczar text-lg font-semibold leading-relaxed max-[450px]:text-base">
+                                            दाँत के कीड़े दोबारा बनने से रोकता है
+                                        </p>
+                                    </li>
+                                    
+                                    <li class="flex items-center gap-4 bg-purple-50 rounded-2xl p-4 shadow-lg hover:scale-105 transition-all duration-300 border-l-6 border-purple-500 max-[450px]:p-3 max-[450px]:gap-3">
+                                        <div class="flex-shrink-0">
+                                            <div class="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold max-[450px]:w-6 max-[450px]:h-6 max-[450px]:text-xs">
+                                                🦷
+                                            </div>
+                                        </div>
+                                        <p class="text-gray-800 font-eczar text-lg font-semibold leading-relaxed max-[450px]:text-base">
+                                            कमजोर दाँतों को अंदर से support
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Product Image -->
+                            <div class="order-2">
+                                <div class="relative">
+                                    <img src="./image/product5.avif" alt="Oral Detox Capsules" 
+                                         class="w-full h-auto max-w-md mx-auto rounded-3xl shadow-2xl border-8 border-brand-primary/20 hover:scale-105 transition-transform duration-500 max-[450px]:max-w-sm max-[450px]:rounded-2xl">
+                                    <div class="absolute -top-4 -left-4 bg-purple-500 text-white px-4 py-2 rounded-full font-bold text-lg animate-bounce max-[450px]:text-base max-[450px]:px-3 max-[450px]:py-1 max-[450px]:-top-3 max-[450px]:-left-3">
+                                        💊 2
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Combined Effect Box -->
+                    <div class="bg-gradient-to-r from-brand-muted to-green-500 rounded-[3rem] p-10 text-center shadow-[0_30px_100px_rgba(0,0,0,0.2)] border-8 border-white/20 backdrop-blur-sm max-[450px]:p-8 max-[450px]:rounded-3xl">
+                        <div class="flex items-center justify-center gap-4 mb-6 max-[450px]:gap-3 max-[450px]:mb-4">
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-lg max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-2xl">
+                                🦷
+                            </div>
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-lg max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-2xl">
+                                ➕
+                            </div>
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-3xl shadow-lg max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-2xl">
+                                💊
+                            </div>
+                        </div>
+                        <h4 class="text-4xl font-bold text-white font-eczar mb-4 max-[450px]:text-3xl max-[450px]:mb-3">
+                            Combined Power Effect
+                        </h4>
+                        <p class="text-white font-eczar text-2xl leading-relaxed mb-6 max-[450px]:text-xl max-[450px]:mb-4">
+                            दोनों मिलकर दाँतों की जड़ से काम करते हैं —<br>
+                            और यही इन्हें toothpaste से <span class="font-bold text-yellow-300 text-3xl max-[450px]:text-2xl">10 गुना ज्यादा असरदार</span> बनाता है।
+                        </p>
+                        <div class="flex justify-center">
+                            <button onclick="scrollToContact()" class="bg-white text-brand-primary px-8 py-4 rounded-2xl font-bold text-xl font-eczar hover:scale-105 transition-all duration-300 shadow-lg max-[450px]:px-6 max-[450px]:py-3 max-[450px]:text-lg">
+                                अभी ऑर्डर करें 🛒
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- Who Should Use This Section -->
             <section
@@ -693,7 +1082,7 @@
                             class="inline-block bg-brand-secondary text-white px-6 py-3 rounded-full text-2xl font-bold font-eczar mb-6 max-[450px]:text-xl max-[450px]:px-4 max-[450px]:py-2 max-[450px]:mb-4">
                             🟢 Dental Drops
                         </div>
-                        <img src="./image/How2.png" alt="Dental Drops Usage"
+                        <img src="./image/How2.avif" alt="Dental Drops Usage"
                             class="w-full h-full object-contain w-full h-full mx-full  rounded-3xl p-4 shadow-2xl mb-6 max-[450px]:w-full max-[450px]:h-full max-[450px]:mb-4">
                     </div>
 
@@ -705,7 +1094,7 @@
                         </div>
                         <div
                             class="w-auto h-auto mx-auto bg-white rounded-3xl p-4 shadow-2xl mb-6 max-[450px]:w-full max-[450px]:h-full max-[450px]:mb-4">
-                            <img src="./image/How3.png" alt="Oral Detox Capsules Usage"
+                            <img src="./image/How3.avif" alt="Oral Detox Capsules Usage"
                                 class="w-full h-full object-contain">
                         </div>
                     </div>
@@ -740,14 +1129,14 @@
                     <div class="w-20 h-1 bg-brand-muted mx-auto rounded-full mt-3"></div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto max-[450px]:gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-6xl mx-auto max-[450px]:gap-8">
                     <!-- Ingredient 1 - लौंग तेल -->
                     <div
                         class="bg-gradient-to-br from-brand-light to-white rounded-3xl p-6 shadow-xl border border-brand-secondary/20 hover:shadow-2xl transition-all duration-300 hover:scale-105 max-[450px]:p-8 max-[450px]:rounded-2xl max-[450px]:bg-gradient-to-b max-[450px]:from-yellow-50 max-[450px]:to-orange-50 max-[450px]:border-4 max-[450px]:border-orange-200">
                         <div class="text-center max-[450px]:space-y-6">
                             <div
                                 class="w-24 h-24 mx-auto mb-4 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden max-[450px]:w-40 max-[450px]:h-40 max-[450px]:mb-6 max-[450px]:shadow-2xl max-[450px]:border-4 max-[450px]:border-orange-300">
-                                <img src="./image/Ind1.png" alt="लौंग तेल"
+                                <img src="./image/Ind1.avif" alt="लौंग तेल"
                                     class="w-20 h-20 object-cover rounded-full max-[450px]:w-36 max-[450px]:h-36">
                             </div>
                             <h3
@@ -776,7 +1165,7 @@
                         <div class="text-center max-[450px]:space-y-6">
                             <div
                                 class="w-24 h-24 mx-auto mb-4 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden max-[450px]:w-40 max-[450px]:h-40 max-[450px]:mb-6 max-[450px]:shadow-2xl max-[450px]:border-4 max-[450px]:border-green-300">
-                                <img src="./image/Ind2.png" alt="नीम एक्सट्रैक्ट"
+                                <img src="./image/Ind2.avif" alt="नीम एक्सट्रैक्ट"
                                     class="w-20 h-20 object-cover rounded-full max-[450px]:w-36 max-[450px]:h-36">
                             </div>
                             <h3
@@ -805,7 +1194,7 @@
                         <div class="text-center max-[450px]:space-y-6">
                             <div
                                 class="w-24 h-24 mx-auto mb-4 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden max-[450px]:w-40 max-[450px]:h-40 max-[450px]:mb-6 max-[450px]:shadow-2xl max-[450px]:border-4 max-[450px]:border-purple-300">
-                                <img src="./image/Ind3.png" alt="मंजिष्ठा"
+                                <img src="./image/Ind3.avif" alt="मंजिष्ठा"
                                     class="w-20 h-20 object-cover rounded-full max-[450px]:w-36 max-[450px]:h-36">
                             </div>
                             <h3
@@ -834,7 +1223,7 @@
                         <div class="text-center max-[450px]:space-y-6">
                             <div
                                 class="w-24 h-24 mx-auto mb-4 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden max-[450px]:w-40 max-[450px]:h-40 max-[450px]:mb-6 max-[450px]:shadow-2xl max-[450px]:border-4 max-[450px]:border-blue-300">
-                                <img src="./image/Ind4.png" alt="त्रिफला"
+                                <img src="./image/Ind4.avif" alt="त्रिफला"
                                     class="w-20 h-20 object-cover rounded-full max-[450px]:w-36 max-[450px]:h-36">
                             </div>
                             <h3
@@ -863,7 +1252,7 @@
                         <div class="text-center max-[450px]:space-y-6">
                             <div
                                 class="w-24 h-24 mx-auto mb-4 rounded-full bg-white shadow-lg flex items-center justify-center overflow-hidden max-[450px]:w-40 max-[450px]:h-40 max-[450px]:mb-6 max-[450px]:shadow-2xl max-[450px]:border-4 max-[450px]:border-rose-300">
-                                <img src="./image/Ind5.png" alt="मुलेठी"
+                                <img src="./image/Ind5.avif" alt="मुलेठी"
                                     class="w-20 h-20 object-cover rounded-full max-[450px]:w-36 max-[450px]:h-36">
                             </div>
                             <h3
@@ -930,7 +1319,7 @@
                             <div class="relative">
                                 <div
                                     class="w-40 h-40 bg-gradient-to-br from-brand-primary/10 via-brand-secondary/20 to-brand-light/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-700 border-4 border-brand-primary/30 backdrop-blur-sm max-[450px]:w-48 max-[450px]:h-48 max-[450px]:p-8">
-                                    <img src="./image/Trust1.png" alt="100% Ayurvedic"
+                                    <img src="./image/Trust1.avif" alt="100% Ayurvedic"
                                         class="w-full h-full object-contain filter drop-shadow-2xl">
                                 </div>
                                 <div
@@ -954,7 +1343,7 @@
                             <div class="relative">
                                 <div
                                     class="w-40 h-40 bg-gradient-to-br from-brand-secondary/10 via-brand-primary/20 to-brand-light/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-700 border-4 border-brand-secondary/30 backdrop-blur-sm max-[450px]:w-48 max-[450px]:h-48 max-[450px]:p-8">
-                                    <img src="./image/Trust2.png" alt="Lab Tested"
+                                    <img src="./image/Trust2.avif" alt="Lab Tested"
                                         class="w-full h-full object-contain filter drop-shadow-2xl">
                                 </div>
                                 <div
@@ -977,7 +1366,7 @@
                             <div class="relative">
                                 <div
                                     class="w-40 h-40 bg-gradient-to-br from-brand-muted/10 via-brand-primary/20 to-brand-light/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-700 border-4 border-brand-muted/30 backdrop-blur-sm max-[450px]:w-48 max-[450px]:h-48 max-[450px]:p-8">
-                                    <img src="./image/Trust3.png" alt="Safe & Secure"
+                                    <img src="./image/Trust3.avif" alt="Safe & Secure"
                                         class="w-full h-full object-contain filter drop-shadow-2xl">
                                 </div>
                                 <div
@@ -988,7 +1377,7 @@
                             <div class="mt-6 text-center max-[450px]:mt-8">
                                 <h4 class="text-lg font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-xl">
                                     सुरक्षित</h4>
-                                <p class="text-sm text-gray-600 font-eczar max-[450px]:text-base">कोई साइड इफेक्ट नहीं
+                                <p class="text-sm text-gray-600 font-eczar max-[450px]:text-base">पहले सामान, बाद में पैसे
                                 </p>
                             </div>
                         </div>
@@ -999,7 +1388,7 @@
                             <div class="relative">
                                 <div
                                     class="w-40 h-40 bg-gradient-to-br from-brand-primary/10 via-brand-muted/20 to-brand-light/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-700 border-4 border-brand-primary/30 backdrop-blur-sm max-[450px]:w-48 max-[450px]:h-48 max-[450px]:p-8">
-                                    <img src="./image/Trust4.png" alt="Quality Assured"
+                                    <img src="./image/Trust4.avif" alt="Quality Assured"
                                         class="w-full h-full object-contain filter drop-shadow-2xl">
                                 </div>
                                 <div
@@ -1021,7 +1410,7 @@
                             <div class="relative">
                                 <div
                                     class="w-40 h-40 bg-gradient-to-br from-brand-secondary/10 via-brand-muted/20 to-brand-light/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-700 border-4 border-brand-secondary/30 backdrop-blur-sm max-[450px]:w-48 max-[450px]:h-48 max-[450px]:p-8">
-                                    <img src="./image/Trust5.png" alt="ISO Certified"
+                                    <img src="./image/Trust5.avif" alt="ISO Certified"
                                         class="w-full h-full object-contain filter drop-shadow-2xl">
                                 </div>
                                 <div
@@ -1044,7 +1433,7 @@
                             <div class="relative">
                                 <div
                                     class="w-40 h-40 bg-gradient-to-br from-brand-muted/10 via-brand-secondary/20 to-brand-light/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl transition-all duration-700 border-4 border-brand-muted/30 backdrop-blur-sm max-[450px]:w-48 max-[450px]:h-48 max-[450px]:p-8">
-                                    <img src="./image/Trust6.png" alt="GMP Certified"
+                                    <img src="./image/Trust6.avif" alt="GMP Certified"
                                         class="w-full h-full object-contain filter drop-shadow-2xl">
                                 </div>
                                 <div
@@ -1066,7 +1455,7 @@
             <!-- Doctor Recommendation Section -->
             <section class="bg-white px-4 py-8 max-[450px]:py-6 max-[450px]:px-3">
                 <div class="text-center mb-8 max-[450px]:mb-6">
-                    <h2 class="text-3xl font-bold text-brand-primary font-tiro mb-2 max-[450px]:text-2xl">
+                    <h2 class="text-3xl font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-2xl">
                         👨‍⚕️ DOCTOR RECOMMENDATION SECTION
                     </h2>
                     <div class="w-20 h-1 bg-brand-secondary mx-auto rounded-full"></div>
@@ -1082,13 +1471,13 @@
                                 <div class="flex-shrink-0 text-center md:text-center">
                                     <div
                                         class="w-32 h-32 mx-auto md:mx-0 rounded-full overflow-hidden flex justify-center border-4 border-brand-secondary shadow-lg max-[450px]:w-24 max-[450px]:h-24">
-                                        <img src="./image/doctor2.webp" alt="Dr. Arvind Mehta"
+                                        <img src="./image/doctor2.avif" alt="Dr. Arvind Mehta"
                                             class="w-full h-full object-top">
                                     </div>
                                 </div>
                                 <div class="mb-4 max-[450px]:mb-3">
                                     <h3
-                                        class="text-2xl font-bold text-brand-primary font-tiro mb-1 max-[450px]:text-xl">
+                                        class="text-2xl font-bold text-brand-primary font-eczar mb-1 max-[450px]:text-xl">
                                         👨‍⚕️ Dr. Arvind Mehta
                                     </h3>
                                     <p class="text-brand-secondary font-semibold text-lg max-[450px]:text-base">
@@ -1106,7 +1495,7 @@
                                     class="bg-white p-4 rounded-xl shadow-inner border border-brand-secondary/20 max-[450px]:p-3">
                                     <div class="text-4xl text-brand-primary mb-2 max-[450px]:text-3xl">❝</div>
                                     <p
-                                        class="text-gray-700 font-tiro leading-relaxed text-lg mb-4 max-[450px]:text-base max-[450px]:mb-3">
+                                        class="text-gray-700 font-eczar leading-relaxed text-lg mb-4 max-[450px]:text-base max-[450px]:mb-3">
                                         "ज्यादातर लोग सड़न, कीड़े और मसूड़ों से खून को हल्का समझ लेते हैं… लेकिन ये
                                         शुरूआती संकेत होते हैं बड़े dental damage के।
                                         मैंने Dental Repair Combo की formulation देखी है—
@@ -1114,15 +1503,15 @@
                                     <div class="space-y-2 mb-4 max-[450px]:mb-3">
                                         <p class="text-brand-primary font-semibold flex items-start gap-2">
                                             <span class="text-green-600">✔</span>
-                                            <span class="font-tiro">Dental Drops सीधे infection पर काम करती हैं</span>
+                                            <span class="font-eczar">Dental Drops सीधे infection पर काम करती हैं</span>
                                         </p>
                                         <p class="text-brand-primary font-semibold flex items-start gap-2">
                                             <span class="text-green-600">✔</span>
-                                            <span class="font-tiro">Oral Detox Capsules अंदरूनी toxin को साफ करके
+                                            <span class="font-eczar">Oral Detox Capsules अंदरूनी toxin को साफ करके
                                                 मसूड़ों को मजबूत करती हैं</span>
                                         </p>
                                     </div>
-                                    <p class="text-gray-700 font-tiro leading-relaxed text-lg max-[450px]:text-base">
+                                    <p class="text-gray-700 font-eczar leading-relaxed text-lg max-[450px]:text-base">
                                         यह combination clinical approach जैसा असर देता है, इसलिए मैं इसे ऐसे patients को
                                         recommend करता हूँ जिन्हें बार-बार cavity, sensitivity या bleeding gums की
                                         complaint रहती है।
@@ -1144,13 +1533,13 @@
                                 <div class="flex-shrink-0 text-center md:text-left">
                                     <div
                                         class="w-32 h-32 mx-auto md:mx-0 rounded-full overflow-hidden border-4 border-brand-primary shadow-lg max-[450px]:w-24 max-[450px]:h-24">
-                                        <img src="./image/doctor1.jpg" alt="Dr. Neha Kapoor"
+                                        <img src="./image/doctor1.avif" alt="Dr. Neha Kapoor"
                                             class="w-full h-full object-cover">
                                     </div>
                                 </div>
                                 <div class="mb-4 max-[450px]:mb-3">
                                     <h3
-                                        class="text-2xl font-bold text-brand-primary font-tiro mb-1 max-[450px]:text-xl">
+                                        class="text-2xl font-bold text-brand-primary font-eczar mb-1 max-[450px]:text-xl">
                                         👩‍⚕️ Dr. Neha Kapoor
                                     </h3>
                                     <p class="text-brand-secondary font-semibold text-lg max-[450px]:text-base">
@@ -1165,7 +1554,7 @@
                                     class="bg-white p-4 rounded-xl shadow-inner border border-brand-secondary/20 max-[450px]:p-3">
                                     <div class="text-4xl text-brand-primary mb-2 max-[450px]:text-3xl">❝</div>
                                     <p
-                                        class="text-gray-700 font-tiro leading-relaxed text-lg mb-4 max-[450px]:text-base max-[450px]:mb-3">
+                                        class="text-gray-700 font-eczar leading-relaxed text-lg mb-4 max-[450px]:text-base max-[450px]:mb-3">
                                         "Dental Repair Combo उन लोगों के लिए बहुत प्रभावी है जो हर महीने dentist के
                                         चक्कर लगा-लगा कर थक चुके हैं।
                                         इसका सबसे अच्छा part यह है कि यह जड़ से infection कम करता है, जिससे:
@@ -1173,18 +1562,18 @@
                                     <div class="space-y-2 mb-4 max-[450px]:mb-3">
                                         <p class="text-brand-primary font-semibold flex items-start gap-2">
                                             <span class="text-green-600">✔</span>
-                                            <span class="font-tiro">सड़न रुकती है</span>
+                                            <span class="font-eczar">सड़न रुकती है</span>
                                         </p>
                                         <p class="text-brand-primary font-semibold flex items-start gap-2">
                                             <span class="text-green-600">✔</span>
-                                            <span class="font-tiro">मसूड़े heal होते हैं</span>
+                                            <span class="font-eczar">मसूड़े heal होते हैं</span>
                                         </p>
                                         <p class="text-brand-primary font-semibold flex items-start gap-2">
                                             <span class="text-green-600">✔</span>
-                                            <span class="font-tiro">दाँत के दर्द को करे ख़तम</span>
+                                            <span class="font-eczar">दाँत के दर्द को करे ख़तम</span>
                                         </p>
                                     </div>
-                                    <p class="text-gray-700 font-tiro leading-relaxed text-lg max-[450px]:text-base">
+                                    <p class="text-gray-700 font-eczar leading-relaxed text-lg max-[450px]:text-base">
                                         मैं इसे खासकर उन patients को suggest करती हूँ जिनके दाँतों में धीरे-धीरे कीड़े
                                         फैल रहे होते हैं और tooth removal तक की नौबत आ जाती है।
                                         Natural होने की वजह से long-term use भी safe है।"
@@ -1202,10 +1591,10 @@
             <section
                 class="bg-gradient-to-br from-brand-muted to-brand-secondary px-4 py-10 max-[450px]:py-8 max-[450px]:px-3">
                 <div class="text-center mb-10 max-[450px]:mb-8">
-                    <h2 class="text-4xl font-bold text-white font-tiro mb-3 max-[450px]:text-3xl drop-shadow-lg">
+                    <h2 class="text-4xl font-bold text-white font-eczar mb-3 max-[450px]:text-3xl drop-shadow-lg">
                         ✨ SUCCESS STORIES ✨
                     </h2>
-                    <p class="text-white/90 text-lg font-tiro max-[450px]:text-base">
+                    <p class="text-white/90 text-lg font-eczar max-[450px]:text-base">
                         हमारे खुश ग्राहकों की सच्ची कहानियाँ
                     </p>
                     <div class="w-24 h-1 bg-white mx-auto rounded-full mt-3"></div>
@@ -1216,10 +1605,10 @@
                     <div class="relative">
                         <div
                             class="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white/20 backdrop-blur-sm">
-                            <div class="flex flex-col lg:flex-row">
+                            <div class="flex flex-col">
                                 <!-- Customer Image -->
-                                <div class="lg:w-1/3 relative">
-                                    <div class="h-80 lg:h-full overflow-hidden">
+                                <div class="w-full relative">
+                                    <div class="h-80 overflow-hidden">
                                         <img src="./image/customer1.avif" alt="राजेश यादव"
                                             class="w-full h-full object-cover">
                                         <div
@@ -1234,7 +1623,7 @@
                                 </div>
 
                                 <!-- Story Content -->
-                                <div class="lg:w-2/3 p-8 max-[450px]:p-6">
+                                <div class="w-full p-8 max-[450px]:p-6">
                                     <div class="flex items-center gap-3 mb-6 max-[450px]:mb-4">
                                         <div
                                             class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-3xl max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-2xl">
@@ -1242,7 +1631,7 @@
                                         </div>
                                         <div>
                                             <h3
-                                                class="text-2xl font-bold text-brand-primary font-tiro max-[450px]:text-xl">
+                                                class="text-2xl font-bold text-brand-primary font-eczar max-[450px]:text-xl">
                                                 राजेश यादव
                                             </h3>
                                             <p class="text-gray-600 font-semibold max-[450px]:text-sm">
@@ -1263,17 +1652,17 @@
                                             ❝
                                         </div>
                                         <p
-                                            class="text-gray-800 font-tiro leading-relaxed text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
+                                            class="text-gray-800 font-eczar leading-relaxed text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
                                             "एक दाँत में इतना कीड़ा और सड़न था कि डॉक्टर ने कहा— दाँत निकालना पड़ेगा।
                                             दर्द और खून रुक ही नहीं रहा था।
                                         </p>
                                         <p
-                                            class="text-green-700 font-bold font-tiro mt-4 text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
+                                            class="text-green-700 font-bold font-eczar mt-4 text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
                                             Dental Repair Combo शुरू किया और सिर्फ 10–12 दिनों में दर्द 70% कम।
                                             2 महीने में सूजन और दर्द दोनों गायब।
                                         </p>
                                         <p
-                                            class="text-brand-primary font-bold font-tiro mt-4 text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
+                                            class="text-brand-primary font-bold font-eczar mt-4 text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
                                             आज वही दाँत बिना निकाले बिल्कुल ठीक है।
                                             सच में—मेरी मुस्कान बच गई।"
                                         </p>
@@ -1297,10 +1686,10 @@
                     <div class="relative">
                         <div
                             class="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-white/20 backdrop-blur-sm">
-                            <div class="flex flex-col lg:flex-row-reverse">
+                            <div class="flex flex-col">
                                 <!-- Customer Image -->
-                                <div class="lg:w-1/3 relative">
-                                    <div class="h-80 lg:h-full overflow-hidden">
+                                <div class="w-full relative">
+                                    <div class="h-80 overflow-hidden">
                                         <img src="./image/customer2.avif" alt="पूजा शर्मा"
                                             class="w-full h-full object-cover">
                                         <div
@@ -1315,7 +1704,7 @@
                                 </div>
 
                                 <!-- Story Content -->
-                                <div class="lg:w-2/3 p-8 max-[450px]:p-6">
+                                <div class="w-full p-8 max-[450px]:p-6">
                                     <div class="flex items-center gap-3 mb-6 max-[450px]:mb-4">
                                         <div
                                             class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center text-3xl max-[450px]:w-12 max-[450px]:h-12 max-[450px]:text-2xl">
@@ -1323,7 +1712,7 @@
                                         </div>
                                         <div>
                                             <h3
-                                                class="text-2xl font-bold text-brand-primary font-tiro max-[450px]:text-xl">
+                                                class="text-2xl font-bold text-brand-primary font-eczar max-[450px]:text-xl">
                                                 पूजा शर्मा
                                             </h3>
                                             <p class="text-gray-600 font-semibold max-[450px]:text-sm">
@@ -1344,20 +1733,20 @@
                                             ❝
                                         </div>
                                         <p
-                                            class="text-gray-800 font-tiro leading-relaxed text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
+                                            class="text-gray-800 font-eczar leading-relaxed text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
                                             "ब्रश करते ही दाँत में खून, ठंडी चीज़ लगते ही तेज झनझनाहट—जीना मुश्किल हो
                                             गया था।
                                             Confidence almost खत्म हो चुका था।
                                         </p>
                                         <p
-                                            class="text-green-700 font-bold font-tiro mt-4 text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
+                                            class="text-green-700 font-bold font-eczar mt-4 text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
                                             Dental Repair Combo लेने के बाद पहले हफ्ते में ही मसूड़ों से bleeding और
                                             झनझनाहट कम होने
                                             लगी।
                                             1–2 महीने में sensitivity खत्म और मसूड़े strong।
                                         </p>
                                         <p
-                                            class="text-brand-primary font-bold font-tiro mt-4 text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
+                                            class="text-brand-primary font-bold font-eczar mt-4 text-lg pl-8 max-[450px]:text-base max-[450px]:pl-6">
                                             अब न मसूड़ों से खून आता है, न शर्मिंदगी—फिर से खुलकर मुस्कुरा रही हूँ।"
                                         </p>
                                         <div
@@ -1380,14 +1769,14 @@
                 <div class="text-center mt-10 max-[450px]:mt-8">
                     <div
                         class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto border border-white/20 max-[450px]:p-4">
-                        <h3 class="text-2xl font-bold text-white font-tiro mb-3 max-[450px]:text-xl">
+                        <h3 class="text-2xl font-bold text-white font-eczar mb-3 max-[450px]:text-xl">
                             आप भी बन सकते हैं हमारी अगली SUCCESS STORY! 🌟
                         </h3>
-                        <p class="text-white/90 font-tiro mb-4 max-[450px]:text-sm">
+                        <p class="text-white/90 font-eczar mb-4 max-[450px]:text-sm">
                             अभी ऑर्डर करें और अपने दाँतों की समस्या को हमेशा के लिए अलविदा कहें
                         </p>
                         <button onclick="scrollToContact()"
-                            class="bg-white text-brand-primary font-bold px-8 py-3 rounded-full text-lg font-tiro hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl max-[450px]:px-6 max-[450px]:py-2 max-[450px]:text-base">
+                            class="bg-white text-brand-primary font-bold px-8 py-3 rounded-full text-lg font-eczar hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl max-[450px]:px-6 max-[450px]:py-2 max-[450px]:text-base">
                             🛒 अभी ऑर्डर करें
                         </button>
                     </div>
@@ -1412,8 +1801,7 @@
                             class="w-full p-3 border-none rounded text-lg text-brand-primary placeholder-gray-500 font-eczar max-[450px]:p-2 max-[450px]:text-base bg-brand-light">
                     </div>
                     <button type="submit"
-                        class="bg-brand-secondary text-brand-accent font-bold border-none py-4 px-8 rounded text-2xl font-eczar font-bold cursor-pointer w-full mt-4 transition-all duration-300 hover:bg-opacity-90 max-[450px]:py-3 max-[450px]:px-4 max-[450px]:text-xl max-[450px]:mt-3 pulse-button glow-effect"
-                        onmouseenter="this.classList.add('shake')" onmouseleave="this.classList.remove('shake')"
+                        class="bg-brand-secondary text-brand-accent font-bold border-none py-4 px-8 rounded text-2xl font-eczar cursor-pointer w-full mt-4 transition-all duration-300 hover:bg-opacity-90 max-[450px]:py-3 max-[450px]:px-4 max-[450px]:text-xl max-[450px]:mt-3"
                         onclick="showThankYou()">
                         <span>✨</span>
                         अभी ऑर्डर करें
@@ -1425,7 +1813,7 @@
             <!-- FAQ Section -->
             <section class="bg-brand-light px-4 py-8 max-[450px]:py-6 max-[450px]:px-3">
                 <div class="text-center mb-8 max-[450px]:mb-6">
-                    <h2 class="text-3xl font-bold text-brand-primary font-tiro mb-2 max-[450px]:text-2xl">
+                    <h2 class="text-3xl font-bold text-brand-primary font-eczar mb-2 max-[450px]:text-2xl">
                         🤔 अक्सर पूछे जाने वाले सवाल
                     </h2>
                     <div class="w-16 h-1 bg-brand-secondary mx-auto rounded-full"></div>
@@ -1436,12 +1824,12 @@
                     <div
                         class="faq-item bg-white rounded-xl shadow-lg border border-brand-secondary/20 overflow-hidden">
                         <button
-                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-tiro hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
+                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-eczar hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
                             <span>1️⃣ क्या यह Dental Repair Combo कीड़े और सड़न में मदद करता है?</span>
                             <span class="faq-icon text-2xl max-[450px]:text-xl">+</span>
                         </button>
                         <div
-                            class="faq-answer hidden px-6 py-4 text-brand-primary font-tiro text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
+                            class="faq-answer hidden px-6 py-4 text-brand-primary font-eczar text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
                             <p class="leading-relaxed">✅ हाँ, यह infection को रोककर सड़न की बढ़त कम करता है।</p>
                         </div>
                     </div>
@@ -1450,12 +1838,12 @@
                     <div
                         class="faq-item bg-white rounded-xl shadow-lg border border-brand-secondary/20 overflow-hidden">
                         <button
-                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-tiro hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
+                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-eczar hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
                             <span>2️⃣ क्या मसूड़ों से खून और सूजन में राहत मिलती है?</span>
                             <span class="faq-icon text-2xl max-[450px]:text-xl">+</span>
                         </button>
                         <div
-                            class="faq-answer hidden px-6 py-4 text-brand-primary font-tiro text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
+                            class="faq-answer hidden px-6 py-4 text-brand-primary font-eczar text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
                             <p class="leading-relaxed">✅ हाँ, Dental Drops मसूड़ों को soothe करके bleeding कम करती हैं।
                             </p>
                         </div>
@@ -1465,12 +1853,12 @@
                     <div
                         class="faq-item bg-white rounded-xl shadow-lg border border-brand-secondary/20 overflow-hidden">
                         <button
-                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-tiro hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
+                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-eczar hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
                             <span>3️⃣ क्या यह बच्चों के लिए सुरक्षित है?</span>
                             <span class="faq-icon text-2xl max-[450px]:text-xl">+</span>
                         </button>
                         <div
-                            class="faq-answer hidden px-6 py-4 text-brand-primary font-tiro text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
+                            class="faq-answer hidden px-6 py-4 text-brand-primary font-eczar text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
                             <p class="leading-relaxed">✅ 10 साल से ऊपर बच्चों के लिए सुरक्षित है (adult dose से कम
                                 मात्रा
                                 में)।</p>
@@ -1481,12 +1869,12 @@
                     <div
                         class="faq-item bg-white rounded-xl shadow-lg border border-brand-secondary/20 overflow-hidden">
                         <button
-                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-tiro hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
+                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-eczar hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
                             <span>4️⃣ कितने समय तक इसका इस्तेमाल करना चाहिए?</span>
                             <span class="faq-icon text-2xl max-[450px]:text-xl">+</span>
                         </button>
                         <div
-                            class="faq-answer hidden px-6 py-4 text-brand-primary font-tiro text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
+                            class="faq-answer hidden px-6 py-4 text-brand-primary font-eczar text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
                             <p class="leading-relaxed">✅ कम से कम 30–45 दिन regular use से अच्छे results मिलते हैं।</p>
                         </div>
                     </div>
@@ -1495,12 +1883,12 @@
                     <div
                         class="faq-item bg-white rounded-xl shadow-lg border border-brand-secondary/20 overflow-hidden">
                         <button
-                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-tiro hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
+                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-eczar hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
                             <span>5️⃣ क्या इसके कोई side effects हैं?</span>
                             <span class="faq-icon text-2xl max-[450px]:text-xl">+</span>
                         </button>
                         <div
-                            class="faq-answer hidden px-6 py-4 text-brand-primary font-tiro text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
+                            class="faq-answer hidden px-6 py-4 text-brand-primary font-eczar text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
                             <p class="leading-relaxed">✅ यह 100% Ayurvedic है, इसलिए सामान्यतः कोई side effects नहीं
                                 होते।
                             </p>
@@ -1511,12 +1899,12 @@
                     <div
                         class="faq-item bg-white rounded-xl shadow-lg border border-brand-secondary/20 overflow-hidden">
                         <button
-                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-tiro hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
+                            class="faq-question w-full text-left px-6 py-4 bg-white text-brand-primary font-semibold text-lg font-eczar hover:bg-brand-light transition-all duration-300 flex justify-between items-center max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base border-b border-brand-light">
                             <span>6️⃣ क्या इससे sensitivity में भी फर्क आता है?</span>
                             <span class="faq-icon text-2xl max-[450px]:text-xl">+</span>
                         </button>
                         <div
-                            class="faq-answer hidden px-6 py-4 text-brand-primary font-tiro text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
+                            class="faq-answer hidden px-6 py-4 text-brand-primary font-eczar text-lg max-[450px]:px-4 max-[450px]:py-3 max-[450px]:text-base">
                             <p class="leading-relaxed">✅ हाँ, hot–cold sensitivity में राहत मिलती है।</p>
                         </div>
                     </div>
@@ -1567,7 +1955,7 @@
             class="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-brand-primary shadow-2xl w-[450px] border-t-4 border-brand-secondary">
             <div class="px-4 py-2 w-full max-[450px]:px-6 max-w-screen-xl mx-auto">
                 <!-- Main Content: Horizontal Layout -->
-                <div class="grid grid-cols-3 gap-3 max-[450px]:gap-5">
+                <div class="grid grid-cols-2 gap-3 max-[450px]:gap-5">
                     <!-- Left Side: Promotional Points -->
                     <div class="flex-1  gap-2 min-w-0">
                         <ul class="text-white text-sm font-eczar font-bold space-y-2 max-[450px]:text-sm">
@@ -1600,8 +1988,8 @@
                         </div>
                         <!-- Order Button -->
                         <button id="ctaButton" onclick="scrollToContact()"
-                            class="cta-button bg-brand-secondary text-white px-3 py-2 rounded-lg font-eczar font-bold text-sm transition-all duration-300 shadow-lg hover:scale-105 pulse-animation glow-effect whitespace-nowrap max-[450px]:text-lg max-[450px]:px-2 max-[450px]:py-1.5"
-                            onmouseenter="this.classList.add('shake')" onmouseleave="this.classList.remove('shake')">
+                            class="bg-brand-secondary text-white px-3 py-2 rounded-lg font-eczar font-bold text-sm transition-all duration-300 shadow-lg hover:scale-105 whitespace-nowrap max-[450px]:text-lg max-[450px]:px-2 max-[450px]:py-1.5"
+                            onclick="scrollToContact()">
                             🛒 Order Now
                         </button>
                     </div>
