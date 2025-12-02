@@ -1951,51 +1951,48 @@
         </div>
 
         <!-- Fixed CTA Form at Bottom -->
-        <div id="fixedCTA"
+       <div id="fixedCTA"
             class="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-brand-primary shadow-2xl w-[450px] border-t-4 border-brand-secondary">
-            <div class="px-4 py-2 w-full max-[450px]:px-6 max-w-screen-xl mx-auto">
+            <div class="px-8 py-2 w-full max-[450px]:px-10 max-w-screen-xl mx-auto">
                 <!-- Main Content: Horizontal Layout -->
-                <div class="grid grid-cols-2 gap-3 max-[450px]:gap-5">
+                <div class="grid grid-cols-1 gap-3 max-[450px]:gap-5">
                     <!-- Left Side: Promotional Points -->
-                    <div class="flex-1  gap-2 min-w-0">
-                        <ul class="text-white text-sm font-eczar font-bold space-y-2 max-[450px]:text-sm">
-                            <li class="flex items-center gap-1.5">
-                                <span class="truncate">🔥 Today Offer</span>
-                            </li>
-                            <li class="flex items-center gap-1.5">
-                                <span class="truncate">📊 Diet Chart</span>
-                            </li>
-                            <li class="flex items-center gap-1.5">
-                                <span class="truncate">💰 COD Available</span>
-                            </li>
-                        </ul>
+                    <div class="flex-1 justify-around  gap-2 min-w-0 text-white gap-5 text-sm font-arya space-x-2 font-bold space-y-2 max-[450px]:text-sm max-[450px]:gap-3 max-[450px]:space-y-0 max-[450px]:flex-wrap flex items-center">
+                                <span class="truncate">🔥 Today Offer</span>                            
+                                <span class="truncate">📊 Diet Chart</span>                            
+                                <span class="truncate">💰 Cod Available</span>                            
                     </div>
 
-                    <!-- Center: Offer Badge
-                    <div
-                        class="animate-bounce text-lg font-bold text-white bg-brand-secondary px-3 shadow-lg text-center flex items-center font-eczar whitespace-nowrap max-[450px]:text-lg max-[450px]:px-2">
-                        🎉 10% OFF
-                    </div> -->
-
                     <!-- Right Side: Timer & Button -->
-                    <div class="flex items-center flex-col gap-3 max-[450px]:gap-2">
-                        <!-- Countdown Timer -->
-                        <div class="text-center">
-                            <div id="countdown"
-                                class="text-white text-lg max-[450px]:text-lg font-extrabold font-eczar whitespace-nowrap">
-                                00:00:00
+                    <div class="flex items-center justify-around flex-row gap-2 max-[450px]:gap-2">
+                        <!-- Countdown Timer with Enhanced Design -->
+                        <div class="text-center relative">
+                            <div class=" shadow-lg">
+                                <div id="countdown"
+                                    class="text-white text-xl max-[450px]:text-xl font-extrabold font-arya whitespace-nowrap flex items-center gap-1">
+                                    <span class="animate-pulse">⏰</span>
+                                    <span>00:00:00</span>
+                                </div>
+                                <p class="text-yellow-200 text-sm max-[450px]:text-sm font-semibold font-arya mt-0.5">
+                                    Offer समाप्त होने में
+                                </p>
                             </div>
                         </div>
-                        <!-- Order Button -->
+                        <!-- Enhanced Order Button -->
                         <button id="ctaButton" onclick="scrollToContact()"
-                            class="bg-brand-secondary text-white px-3 py-2 rounded-lg font-eczar font-bold text-sm transition-all duration-300 shadow-lg hover:scale-105 whitespace-nowrap max-[450px]:text-lg max-[450px]:px-2 max-[450px]:py-1.5"
-                            onclick="scrollToContact()">
-                            🛒 Order Now
+                            class="bg-gradient-to-r from-brand-secondary to-red-600 text-white px-4 py-2.5 rounded-xl font-arya font-bold text-sm transition-all duration-300 shadow-2xl hover:scale-110 hover:shadow-3xl transform whitespace-nowrap max-[450px]:text-base max-[450px]:px-3 max-[450px]:py-2 border-2 border-yellow-400 relative overflow-hidden group">
+                            <span class="relative z-10 flex items-center gap-1">
+                                <span class="animate-bounce">🛒</span>
+                                <span>Order Now</span>
+                                <span class="animate-pulse">🔥</span>
+                            </span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
     <script>
         function showThankYou() {
