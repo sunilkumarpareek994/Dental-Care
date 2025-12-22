@@ -1114,8 +1114,7 @@
             </section>
 
             <!-- How to Use Section -->
-            <section
-                class="bg-gradient-to-br from-brand-light via-white to-brand-light px-4 py-4 max-[450px]:py-3 max-[450px]:px-3">
+            <section class="bg-gradient-to-br from-brand-light via-white to-brand-light px-4 py-4 max-[450px]:py-3 max-[450px]:px-3">
                 <div
                     class="bg-white rounded-[3rem] p-3  shadow-[0_30px_100px_rgba(33,86,132,0.15)] border-8 border-brand-primary max-w-6xl mx-auto max-[450px]:p-2 max-[450px]:rounded-3xl max-[450px]:border-6 backdrop-blur-sm bg-white/98">
 
@@ -1869,9 +1868,55 @@
                 </div>
             </section>
 
+            <html>
+            <head>
+                <script>
+                    function showThankYou(event) {
+                        // Prevent default form submission
+                        if (event) {
+                            event.preventDefault();
+                        }
+
+                        // Process and fill form data
+                        const name = document.getElementById('name').value;
+                        const phone = document.getElementById('phone').value;
+
+                        // Validate form data
+                        if (!name || !phone || phone.length < 10 || phone.length > 15) {
+                            alert('कृपया सभी फील्ड सही ढंग से भरें!');
+                            return false;
+                        }
+
+                        // Process the data (you can modify this part as needed)
+                        const formData = {
+                            customerName: name,
+                            phoneNumber: phone,
+                            timestamp: new Date().toLocaleString('hi-IN'),
+                        };
+
+                        // Fill/store the processed data (example: console log or local storage)
+                        localStorage.setItem('customerOrder', JSON.stringify(formData));
+
+                        // Navigate to ThankYou page
+                        window.location.href = 'ThankYou.html';
+
+                        return false; // Prevent form submission
+                    }
+
+                    function closeModal() {
+                        const modal = document.getElementById('thankYouModal');
+                        if (modal) {
+                            modal.style.display = 'none';
+                        }
+                        document.getElementById('contactForm').reset();
+                    }
+
+                </script>
+            </head>
+            <body>     
             <!-- Contact Section -->
             <section class="px-4 py-4 bg-brand-primary text-white max-[450px]:py-3 max-[450px]:px-3" id="contact">
-                <form id="contactForm">
+                <form id="contactForm" onsubmit="return showThankYou(event)">
                     <div class="mb-4 max-[450px]:mb-3">
                         <label for="name"
                             class="block mb-2 text-xl text-white font-eczar font-semibold max-[450px]:text-lg max-[450px]:mb-1">आपका
@@ -1887,14 +1932,15 @@
                             class="w-full p-3 border-none rounded text-lg text-brand-primary placeholder-gray-500 font-eczar max-[450px]:p-2 max-[450px]:text-base bg-brand-light">
                     </div>
                     <button type="submit"
-                        class="bg-brand-secondary text-brand-accent font-bold border-none py-4 px-8 rounded text-2xl font-eczar cursor-pointer w-full mt-4 transition-all duration-300 hover:bg-opacity-90 max-[450px]:py-3 max-[450px]:px-4 max-[450px]:text-xl max-[450px]:mt-3"
-                        onclick="showThankYou()">
+                        class="bg-brand-secondary text-brand-accent font-bold border-none py-4 px-8 rounded text-2xl font-eczar cursor-pointer w-full mt-4 transition-all duration-300 hover:bg-opacity-90 max-[450px]:py-3 max-[450px]:px-4 max-[450px]:text-xl max-[450px]:mt-3">
                         <span>✨</span>
                         अभी ऑर्डर करें
                         <span>✨</span>
                     </button>
                 </form>
             </section>
+            </body>
+            </html>
 
             <!-- FAQ Section -->
             <section class="bg-brand-light px-4 py-4 max-[450px]:py-3 max-[450px]:px-3">
@@ -2019,23 +2065,6 @@
                 अपने दाँतों की सुरक्षा आज ही शुरू करें। * LIMITED STOCK *
             </div>
         </div>
-
-        <!-- Thank You Modal -->
-        <div id="thankYouModal" class="hidden fixed top-0 left-0 w-full h-full z-50 flex items-center justify-center"
-            style="background-color:rgba(255,255,255,0.2); border-radius: 15px; padding: 8px 16px; backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.3); box-shadow: 0 8px 25px rgba(0, 0, 0, 0);">
-            <div
-                class="bg-brand-light p-8 rounded-lg text-center max-w-sm mx-4 max-[450px]:p-6 max-[450px]:max-w-xs border-2 border-brand-secondary">
-                <h2 class="text-brand-primary mb-4 text-2xl font-eczar font-bold max-[450px]:text-xl max-[450px]:mb-3">
-                    धन्यवाद!</h2>
-                <p class="text-xl mb-6 font-eczar font-medium max-[450px]:text-lg max-[450px]:mb-4 text-gray-700">
-                    हमने
-                    आपकी
-                    जानकारी
-                    प्राप्त कर ली है और आपकी
-                    मुफ्त सलाह निर्धारित करने के लिए 24 घंटे के भीतर आपसे संपर्क करेंगे।</p>
-            </div>
-        </div>
-
         <!-- Fixed CTA Form at Bottom -->
         <div id="fixedCTA"
             class="fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 bg-brand-primary shadow-2xl w-[450px] border-t-4 border-brand-secondary">
@@ -2084,54 +2113,6 @@
 
     </div>
     <script>
-        function showThankYou() {
-            // Process and fill form data
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-
-            // Validate form data
-            if (!name || !phone) {
-                alert('कृपया सभी फील्ड भरें!');
-                return false;
-            }
-
-            // Process the data (you can modify this part as needed)
-            const formData = {
-                customerName: name,
-                phoneNumber: phone,
-                timestamp: new Date().toLocaleString('hi-IN'),
-                product: 'Mirgi Mukti'
-            };
-
-            // Fill/store the processed data (example: console log or local storage)
-            console.log('Form Data Processed:', formData);
-            localStorage.setItem('customerOrder', JSON.stringify(formData));
-
-            // Show thank you modal if it exists, otherwise show alert
-            const modal = document.getElementById('thankYouModal');
-            if (modal) {
-                modal.style.display = 'flex';
-                // Auto close after 3 seconds
-                setTimeout(() => {
-                    closeModal();
-                }, 20000);
-            } else {
-                // Fallback alert with processed data
-                alert(`धन्यवाद ${name}! आपका ऑर्डर सफलतापूर्वक सबमिट हो गया है। हमारी टीम जल्द ही ${phone} पर आपसे संपर्क करेगी।`);
-                document.getElementById('contactForm').reset();
-            }
-
-            return true;
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('thankYouModal');
-            if (modal) {
-                modal.style.display = 'none';
-            }
-            document.getElementById('contactForm').reset();
-        }
-
         function scrollToContact() {
             document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
         }
